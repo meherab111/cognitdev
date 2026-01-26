@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Mohave";
+  src: url("../fonts/Mohave-VariableFont_wght.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-VariableFont_wght.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-mohave: "Mohave", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+
+  --color-dark-gray: #222222;
+  --color-medium-gray: #444444;
+  --color-light-gray: #666666;
+
+  --color-snow-white: #fafafa;
+}
+
+@layer utilities {
+  .custom-container {
+    width: 100%;
+    padding-inline: 20px;
+    margin-inline: auto;
+
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-snow-white);
+}

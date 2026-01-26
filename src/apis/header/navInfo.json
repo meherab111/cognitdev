@@ -1,0 +1,22 @@
+[
+  {
+    "text": "About",
+    "path": "/about"
+  },
+  {
+    "text": "Services",
+    "path": "/services"
+  },
+  {
+    "text": "Work",
+    "path": "/work"
+  },
+  {
+    "text": "FAQ",
+    "path": "/faq"
+  },
+  {
+    "text": "Contact",
+    "path": "/contact"
+  }
+]

@@ -18,14 +18,38 @@
   --font-mohave: "Mohave", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
 
-  --color-dark-gray: #222222;
-  --color-medium-gray: #444444;
-  --color-light-gray: #666666;
+  --color-dark-gray: #191919;
+  --color-medium-gray: #393939;
+  --color-light-gray: #696969;
 
-  --color-snow-white: #fafafa;
+  --color-smoke-white: #fafafa;
 }
 
 @layer utilities {
+
+  li, a, .footer-logo{
+    transition: all 0.2s linear;
+  }
+
+  .contact-spin{
+    animation: circle-spin 8s linear infinite;
+  }
+
+  .contact-spin:hover{
+    animation-play-state: paused;
+    cursor: url('/images/footer/arrow-icon.png'), auto;
+  }
+
+  @keyframes circle-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
   .custom-container {
     width: 100%;
     padding-inline: 20px;
@@ -51,5 +75,5 @@
 
 body {
   overflow-x: hidden;
-  background-color: var(--color-snow-white);
+  background-color: var(--color-smoke-white);
 }

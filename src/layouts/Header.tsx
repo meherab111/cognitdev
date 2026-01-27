@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 import navInfo from "../apis/header/navInfo.json";
 
-interface NavItems {
+interface INavInfo {
   text: string;
   path: string;
 }
 
 const Header = () => {
-  const tsNavInfo = navInfo as NavItems[];
+  const tsNavInfo = navInfo as INavInfo[];
 
   return (
     <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 custom-container">
@@ -16,9 +16,9 @@ const Header = () => {
           <img
             src="/images/logo/cognitdev-logo.webp"
             alt="CognitDev Logo"
-            width="52"
-            height="52"
-            className="h-auto w-[52px] object-contain"
+            width="54"
+            height="54"
+            className="h-auto w-[54px] object-contain"
           />
         </Link>
         <ul className="flex gap-[30px]">
@@ -28,7 +28,7 @@ const Header = () => {
                 <Link
                   to={elem.path}
                   aria-label={elem.text}
-                  className="font-quicksand font-medium text-[18px] text-dark-gray hover:text-light-gray border-b border-b-dark-gray hover:border-b-smoke-white"
+                  className="font-quicksand font-medium text-[18px] text-dark-gray hover:text-light-gray/70 border-b border-b-dark-gray hover:border-b-smoke-white"
                 >
                   {elem.text}
                 </Link>

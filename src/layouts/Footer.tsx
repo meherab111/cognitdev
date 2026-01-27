@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 import followInfo from "../apis/footer/followInfo.json";
 
-interface FollowItems {
+interface IFollowInfo {
   text: string;
   link: string;
 }
 
 const Footer = () => {
-  const tsFollowInfo = followInfo as FollowItems[];
+  const tsFollowInfo = followInfo as IFollowInfo[];
 
   return (
     <footer className="h-auto bg-dark-gray">
@@ -56,7 +56,7 @@ const Footer = () => {
         <div>
           <Link to="/contact">
             <div className="contact-spin bg-smoke-white h-[200px] w-[200px] rounded-full flex justify-center items-center">
-              <p className="text-dark-gray font-mohave font-medium text-[36px] uppercase">
+              <p className="text-dark-gray font-mohave font-medium text-[38px] uppercase">
                 contact
               </p>
             </div>

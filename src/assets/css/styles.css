@@ -26,29 +26,29 @@
 }
 
 @layer utilities {
-
-  li, a, .footer-logo{
+  li,
+  a,
+  .footer-logo {
     transition: all 0.2s linear;
   }
 
-  .contact-spin{
+  .contact-spin {
     animation: circle-spin 8s linear infinite;
   }
 
-  .contact-spin:hover{
+  .contact-spin:hover {
     animation-play-state: paused;
-    cursor: url('/images/footer/arrow-icon.png'), auto;
+    cursor: url("/images/footer/arrow-icon.webp"), auto;
   }
 
   @keyframes circle-spin {
-  from {
-    transform: rotate(0deg);
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
   .custom-container {
     width: 100%;

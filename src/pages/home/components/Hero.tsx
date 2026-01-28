@@ -4,7 +4,7 @@ const Hero = () => {
   const heroText: string = "text-dark-gray font-quicksand tracking-tight";
 
   return (
-    <section className="min-h-screen custom-container pt-[240px] flex gap-[30px]">
+    <section className="custom-container pt-[240px] pb-[100px] flex gap-[30px]">
       <figure>
         <img
           src="/images/hero/hero-image.webp"

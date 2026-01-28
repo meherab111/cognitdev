@@ -1,38 +1,6 @@
 [
   {
     "serviceId": "service01",
-    "title": "CMS & Headless Dev",
-    "choices": [
-      "Custom CMS Setup",
-      "Headless Architecture Experts",
-      "Secure & Scalable CMS",
-      "API & Third-Party Integration"
-    ],
-    "srcImg": [
-      "/services/service-01/cms-img-1.webp",
-      "/services/service-01/cms-img-2.webp"
-    ],
-    "offers": [
-      {
-        "heading": "Content Architecture & Migration",
-        "description": "We design scalable, SEO-first content hierarchies that grow with your business. Whether moving from WordPress, Wix, or a custom legacy system, we handle the transition with deep clean audits of messy data and broken links, ensuring zero downtime for your users."
-      },
-      {
-        "heading": "Custom WordPress Development",
-        "description": "Get a lightweight, mobile-friendly website that is actually easy to use. We build custom themes and plugins tailored to your specific workflow, providing an intuitive admin panel that lets you manage your site effortlessly while maintaining top tier SEO standards."
-      },
-      {
-        "heading": "API-First Integrations",
-        "description": "Modernize your workflow by syncing your website with mobile apps, CRMs, and e-commerce platforms. By utilizing REST or GraphQL APIs, we help you build once and publish everywhere, ensuring your data flows perfectly across all your digital touch points."
-      },
-      {
-        "heading": "Headless CMS Setup",
-        "description": "Future-proof your brand with a Headless architecture (Next.js/React). By separating your content from the design, your team can update copy and media in real-time without touching a line of code all while delivering a blazing-fast experience across web and mobile."
-      }
-    ]
-  },
-  {
-    "serviceId": "service02",
     "title": "Custom Web App Dev",
     "choices": [
       "Built for Your Business Goals",
@@ -41,8 +9,8 @@
       "Performance & SEO Optimized"
     ],
     "srcImg": [
-      "/services/service-02/custom-img-1.webp",
-      "/services/service-02/custom-img-2.webp"
+      "images/services/service-01/custom-img-1.webp",
+      "images/services/service-01/custom-img-2.webp"
     ],
     "offers": [
       {
@@ -64,7 +32,7 @@
     ]
   },
   {
-    "serviceId": "service03",
+    "serviceId": "service02",
     "title": "Mobile App Dev",
     "choices": [
       "Custom Built App",
@@ -73,8 +41,8 @@
       "Scalable & Secure Architecture"
     ],
     "srcImg": [
-      "/services/service-03/mobile-img-1.webp",
-      "/services/service-03/mobile-img-2.webp"
+      "images/services/service-02/mobile-img-1.webp",
+      "images/services/service-02/mobile-img-2.webp"
     ],
     "offers": [
       {
@@ -96,7 +64,7 @@
     ]
   },
   {
-    "serviceId": "service04",
+    "serviceId": "service03",
     "title": "UI/UX Design & Dev",
     "choices": [
       "Modern, Clean Interfaces",
@@ -105,8 +73,8 @@
       "Collaborative & Iterative"
     ],
     "srcImg": [
-      "/services/service-04/ui-img-1.webp",
-      "/services/service-04/ui-img-2.webp"
+      "images/services/service-03/ui-img-1.webp",
+      "images/services/service-03/ui-img-2.webp"
     ],
     "offers": [
       {
@@ -128,6 +96,38 @@
     ]
   },
   {
+    "serviceId": "service04",
+    "title": "CMS & Headless Dev",
+    "choices": [
+      "Custom CMS Setup",
+      "Headless Architecture Experts",
+      "Secure & Scalable CMS",
+      "API & Third-Party Integration"
+    ],
+    "srcImg": [
+      "images/services/service-04/cms-img-1.webp",
+      "images/services/service-04/cms-img-2.webp"
+    ],
+    "offers": [
+      {
+        "heading": "Content Architecture & Migration",
+        "description": "We design scalable, SEO-first content hierarchies that grow with your business. Whether moving from WordPress, Wix, or a custom legacy system, we handle the transition with deep clean audits of messy data and broken links, ensuring zero downtime for your users."
+      },
+      {
+        "heading": "Custom WordPress Development",
+        "description": "Get a lightweight, mobile-friendly website that is actually easy to use. We build custom themes and plugins tailored to your specific workflow, providing an intuitive admin panel that lets you manage your site effortlessly while maintaining top tier SEO standards."
+      },
+      {
+        "heading": "API-First Integrations",
+        "description": "Modernize your workflow by syncing your website with mobile apps, CRMs, and e-commerce platforms. By utilizing REST or GraphQL APIs, we help you build once and publish everywhere, ensuring your data flows perfectly across all your digital touch points."
+      },
+      {
+        "heading": "Headless CMS Setup",
+        "description": "Future-proof your brand with a Headless architecture (Next.js/React). By separating your content from the design, your team can update copy and media in real-time without touching a line of code all while delivering a blazing-fast experience across web and mobile."
+      }
+    ]
+  },
+  {
     "serviceId": "service05",
     "title": "Cloud Solutions & DevOps",
     "choices": [
@@ -137,8 +137,8 @@
       "Faster Release Cycle"
     ],
     "srcImg": [
-      "/services/service-05/cloud-img-1.webp",
-      "/services/service-05/cloud-img-2.webp"
+      "images/services/service-05/cloud-img-1.webp",
+      "images/services/service-05/cloud-img-2.webp"
     ],
     "offers": [
       {

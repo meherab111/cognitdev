@@ -10,14 +10,14 @@ const Header = () => {
   const tsNavInfo = navInfo as INavInfo[];
 
   return (
-    <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 custom-container">
-      <nav className="flex justify-between items-center h-[100px] bg-smoke-white">
+    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-50">
+      <nav className="custom-container h-[100px] flex justify-between items-center ">
         <Link to={"/"} aria-label="CognitDev Home">
           <img
             src="/images/logo/cognitdev-logo.webp"
             alt="CognitDev Logo"
-            width="54"
-            height="54"
+            width="60"
+            height="60"
             className="h-auto w-[54px] object-contain"
           />
         </Link>

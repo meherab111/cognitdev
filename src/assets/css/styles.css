@@ -38,7 +38,7 @@
 
   .contact-spin:hover {
     animation-play-state: paused;
-    cursor: url("/images/footer/arrow-icon.webp"), auto;
+    cursor: url("/images/footer/corner-arrow.webp"), auto;
   }
 
   @keyframes circle-spin {

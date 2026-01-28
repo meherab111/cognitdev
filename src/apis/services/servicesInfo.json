@@ -1,0 +1,32 @@
+[
+  {
+    "serviceId": "service01",
+    "title": "CMS & Headless Dev",
+    "subtitle": "Fast, flexible content systems built for growth. We handle the tech so you can manage your content with total ease.",
+    "titleImg": "/services/service-01/cms-dev.webp"
+  },
+  {
+    "serviceId": "service02",
+    "title": "Custom Web App Dev",
+    "subtitle": "We build custom, secure, and responsive web apps from dashboards to booking systems backend by full end to end support.",
+    "titleImg": "/services/service-02/custom-dev.webp"
+  },
+  {
+    "serviceId": "service03",
+    "title": "Mobile App Dev",
+    "subtitle": "Scalable mobile and cross-platform apps. Smooth user experiences tailored for startups, service businesses, and local brands.",
+    "titleImg": "/services/service-03/mobile-dev.webp"
+  },
+  {
+    "serviceId": "service04",
+    "title": "UI/UX Design & Dev",
+    "subtitle": "Clean, modern design meets polished code. We create intuitive interfaces that build trust and provide a flawless user experience on every scroll.",
+    "titleImg": "/services/service-04/ui-dev.webp"
+  },
+  {
+    "serviceId": "service05",
+    "title": "Cloud Solutions & DevOps",
+    "subtitle": "Scalable cloud solutions with 24/7 uptime. We manage your deployments and servers, ensuring your tech grows effortlessly alongside your user base.",
+    "titleImg": "/services/service-05/cloud-dev.webp"
+  }
+]

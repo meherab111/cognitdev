@@ -1,0 +1,162 @@
+[
+  {
+    "serviceId": "service01",
+    "title": "CMS & Headless Dev",
+    "choices": [
+      "Custom CMS Setup",
+      "Headless Architecture Experts",
+      "Secure & Scalable CMS",
+      "API & Third-Party Integration"
+    ],
+    "srcImg": [
+      "/services/service-01/cms-img-1.webp",
+      "/services/service-01/cms-img-2.webp"
+    ],
+    "offers": [
+      {
+        "heading": "Content Architecture & Migration",
+        "description": "We design scalable, SEO-first content hierarchies that grow with your business. Whether moving from WordPress, Wix, or a custom legacy system, we handle the transition with deep clean audits of messy data and broken links, ensuring zero downtime for your users."
+      },
+      {
+        "heading": "Custom WordPress Development",
+        "description": "Get a lightweight, mobile-friendly website that is actually easy to use. We build custom themes and plugins tailored to your specific workflow, providing an intuitive admin panel that lets you manage your site effortlessly while maintaining top tier SEO standards."
+      },
+      {
+        "heading": "API-First Integrations",
+        "description": "Modernize your workflow by syncing your website with mobile apps, CRMs, and e-commerce platforms. By utilizing REST or GraphQL APIs, we help you build once and publish everywhere, ensuring your data flows perfectly across all your digital touch points."
+      },
+      {
+        "heading": "Headless CMS Setup",
+        "description": "Future-proof your brand with a Headless architecture (Next.js/React). By separating your content from the design, your team can update copy and media in real-time without touching a line of code all while delivering a blazing-fast experience across web and mobile."
+      }
+    ]
+  },
+  {
+    "serviceId": "service02",
+    "title": "Custom Web App Dev",
+    "choices": [
+      "Built for Your Business Goals",
+      "Scalable Architecture",
+      "Secure & Compliant App",
+      "Performance & SEO Optimized"
+    ],
+    "srcImg": [
+      "/services/service-02/custom-img-1.webp",
+      "/services/service-02/custom-img-2.webp"
+    ],
+    "offers": [
+      {
+        "heading": "Custom Business Web Apps",
+        "description": "We build robust dashboards, booking systems, and portals designed specifically around your business goals. Our applications feature clean, intuitive interfaces with full English and Bangla support, ensuring a seamless experience across desktop, tablet, and mobile devices."
+      },
+      {
+        "heading": "Admin Panels & Dashboards",
+        "description": "Take command of your business data from a single, secure location. We develop high-performance panels featuring real-time data visualization, interactive charts, and role-based access control (RBAC), allowing you to manage users and operations with total confidence."
+      },
+      {
+        "heading": "E-Commerce & Service Platforms",
+        "description": "From custom product catalogs to complex subscription models, we build shopping and booking experiences that work. Our platforms are mobile-first and SEO-ready, fully integrated with SMS notifications, automated emails, and secure local or international payment gateways."
+      },
+      {
+        "heading": "API & Backend Development",
+        "description": "We engineer fast and secure backend architectures that serve as the backbone for your web and mobile apps. Utilizing modern tech stacks for real-time data sync and API connectivity, we ensure your system is highly performant today and ready to scale for tomorrow's features."
+      }
+    ]
+  },
+  {
+    "serviceId": "service03",
+    "title": "Mobile App Dev",
+    "choices": [
+      "Custom Built App",
+      "Fast, Responsive & User-Friendly",
+      "API & Payment Integration",
+      "Scalable & Secure Architecture"
+    ],
+    "srcImg": [
+      "/services/service-03/mobile-img-1.webp",
+      "/services/service-03/mobile-img-2.webp"
+    ],
+    "offers": [
+      {
+        "heading": "Android & iOS App Development",
+        "description": "We engineer secure, optimized applications specifically for Android and iOS ecosystems. By focusing on platform-specific performance and providing full Bangla and English language support, we ensure your app delivers a premium experience to both local users and global audiences."
+      },
+      {
+        "heading": "Cross-Platform Development",
+        "description": "Maximize your reach while optimizing time and cost. Using industry-leading frameworks like React Native and Flutter, we build a single, high-quality codebase that runs perfectly on both Android and iOS, featuring smooth animations and a scalable architecture that is easy to update."
+      },
+      {
+        "heading": "API & Backend Integration",
+        "description": "Transform your mobile app into a powerful tool by connecting it to your existing databases, websites, or admin panels. We implement secure authentication, real-time data sync, and advanced features like integrated payment gateways and live chat, all powered by a robust, scalable backend."
+      },
+      {
+        "heading": "App Store & Play Store Launch",
+        "description": "We take the stress out of the 'Go-Live' phase by managing the entire submission and approval process. From designing high-impact icons and screenshots to implementing App Store Optimization (ASO) for better organic reach, we ensure your app makes a strong first impression on the market."
+      }
+    ]
+  },
+  {
+    "serviceId": "service04",
+    "title": "UI/UX Design & Dev",
+    "choices": [
+      "Modern, Clean Interfaces",
+      "Wireframe to Final UI",
+      "Accessibility & Performance First",
+      "Collaborative & Iterative"
+    ],
+    "srcImg": [
+      "/services/service-04/ui-img-1.webp",
+      "/services/service-04/ui-img-2.webp"
+    ],
+    "offers": [
+      {
+        "heading": "User Interface (UI) Design",
+        "description": "We craft clean, high-impact layouts tailored to your specific audience and business goals. By focusing on custom typography, sophisticated color palettes, and a mobile-first philosophy, we ensure your brand looks premium and professional on every screen size."
+      },
+      {
+        "heading": "User Experience (UX) Design",
+        "description": "Great design is about how it works, not just how it looks. We utilize wireframe and interactive prototyping to map out clear user flows and conversion-focused funnels, ensuring your site or app is easy to navigate, highly accessible, and optimized to turn visitors into customers."
+      },
+      {
+        "heading": "Frontend Development",
+        "description": "We bring designs to life using modern tech stacks like React, Next.js, and Tailwind CSS. Our frontend development focuses on 'blazing-fast' loading speeds, fluid animations, and SEO-optimized structures that ensure your interface is as performant as it is beautiful."
+      },
+      {
+        "heading": "Design Systems & Components",
+        "description": "Eliminate design debt with a centralized system of reusable UI components. We provide organized Figma handoffs and modular code libraries that ensure a consistent look and feel across all your platforms, making it effortless for your team to expand and update the project in the future."
+      }
+    ]
+  },
+  {
+    "serviceId": "service05",
+    "title": "Cloud Solutions & DevOps",
+    "choices": [
+      "Zero-Downtime Mentality",
+      "Security-First Culture",
+      "Cost-Efficient Scaling",
+      "Faster Release Cycle"
+    ],
+    "srcImg": [
+      "/services/service-05/cloud-img-1.webp",
+      "/services/service-05/cloud-img-2.webp"
+    ],
+    "offers": [
+      {
+        "heading": "Automated CI/CD Pipelines",
+        "description": "We eliminate manual errors by automating your build, test, and deployment processes. This ensures that every code update is safely and consistently pushed to production without disrupting your existing users."
+      },
+      {
+        "heading": "Managed Cloud Infrastructure",
+        "description": "Whether you use AWS, Google Cloud, or Azure, we handle the complex setup and maintenance. We manage your servers, databases, and networking to ensure peak performance and 99.9% uptime."
+      },
+      {
+        "heading": "Infrastructure as Code (IaC)",
+        "description": "We treat your infrastructure like software, using tools like Terraform or CloudFormation. This allows us to rebuild or duplicate your entire environment in minutes, making disaster recovery and scaling incredibly fast."
+      },
+      {
+        "heading": "Performance Monitoring & Security",
+        "description": "We provide 24/7 monitoring and real-time alerts to catch issues before your users do. Our proactive approach includes regular security audits and load testing to keep your system robust under pressure."
+      }
+    ]
+  }
+]

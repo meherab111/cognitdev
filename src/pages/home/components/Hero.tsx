@@ -1,15 +1,17 @@
-import Button from "../../components/Button";
+import Button from "../../../components/shared/Button";
 
 const Hero = () => {
   const heroText: string = "text-dark-gray font-quicksand tracking-tight";
 
   return (
-    <section className="h-screen custom-container pt-[240px] flex gap-[30px]">
+    <section className="min-h-screen custom-container pt-[240px] flex gap-[30px]">
       <figure>
         <img
           src="/images/hero/hero-image.webp"
           alt="Hero Background Image"
-          className="h-[500px] w-[700px] object-cover"
+          width="700"
+          height="550"
+          className="h-auto w-[700px] object-cover rounded-sm"
         />
       </figure>
       <div className="space-y-[60px]">

@@ -15,14 +15,14 @@ const Footer = () => {
         <div className="flex flex-col gap-[60px] pt-[60px] pb-[30px]">
           <div className="w-fit">
             <Link to="/" aria-label="CognitDev Home">
-              <span className="footer-logo text-smoke-white font-medium font-quicksand text-[56px] hover:text-light-gray">
+              <span className="footer-logo text-smoke-white font-semibold font-quicksand text-[56px] hover:text-light-gray">
                 CognitDev
               </span>
             </Link>
           </div>
 
           <div className="w-full max-w-[600px]">
-            <h2 className="text-smoke-white font-quicksand text-[32px]">
+            <h2 className="text-smoke-white font-medium font-quicksand text-[32px]">
               Let's collaborate to transform your vision into a market leading
               business.
             </h2>
@@ -56,7 +56,7 @@ const Footer = () => {
         <div>
           <Link to="/contact">
             <div className="contact-spin bg-smoke-white h-[200px] w-[200px] rounded-full flex justify-center items-center">
-              <p className="text-dark-gray font-mohave font-medium text-[38px] uppercase">
+              <p className="text-dark-gray font-mohave font-semibold text-[38px] uppercase">
                 contact
               </p>
             </div>

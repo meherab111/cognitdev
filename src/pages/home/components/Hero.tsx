@@ -16,8 +16,10 @@ const Hero = () => {
       </figure>
       <div className="space-y-[60px]">
         <div>
-          <h1 className={`${heroText} font-medium text-[90px]`}>CognitDev,</h1>
-          <h2 className={`${heroText} font-light text-[52px]`}>
+          <h1 className={`${heroText} font-semibold text-[90px]`}>
+            CognitDev,
+          </h1>
+          <h2 className={`${heroText} font-medium text-[52px]`}>
             a software development company building digital products for your
             business.
           </h2>

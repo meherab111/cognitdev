@@ -15,7 +15,7 @@ const ServicesHome = () => {
   return (
     <section className="custom-container py-[100px]">
       <div className="flex justify-between pb-[42px]">
-        <h1 className="font-mohave text-[42px] font-medium text-dark-gray border-b-2 border=b-dark-gray">
+        <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border=b-dark-gray">
           Services
         </h1>
         <div>
@@ -27,14 +27,14 @@ const ServicesHome = () => {
           return (
             <div
               key={elem.serviceId}
-              className={`service-card flex gap-[30px] shadow-sm rounded-sm hover:shadow-lg ${idx === 2 ? "col-span-2" : ""}`}
+              className={`service-card flex gap-[20px] shadow-sm rounded-sm hover:shadow-lg ${idx === 2 ? "col-span-2" : ""}`}
             >
               <div className="flex flex-col gap-[60px] justify-between p-[30px]">
                 <div className="space-y-[16px]">
-                  <h2 className="font-quicksand text-[30px] font-medium text-dark-gray leading-[42px]">
+                  <h2 className="font-quicksand text-[30px] font-semibold text-dark-gray leading-[42px]">
                     {elem.title}
                   </h2>
-                  <h3 className="font-quicksand text-[20px] text-dark-gray">
+                  <h3 className="font-quicksand font-medium text-[20px] text-dark-gray">
                     {elem.subtitle}
                   </h3>
                 </div>

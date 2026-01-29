@@ -28,7 +28,7 @@ const Header = () => {
                 <Link
                   to={elem.path}
                   aria-label={elem.text}
-                  className="font-quicksand font-medium text-[18px] text-dark-gray hover:text-light-gray/70 border-b border-b-dark-gray hover:border-b-smoke-white"
+                  className="font-quicksand font-semibold text-[18px] text-dark-gray hover:text-light-gray/70 border-b-2 border-b-dark-gray hover:border-b-smoke-white"
                 >
                   {elem.text}
                 </Link>

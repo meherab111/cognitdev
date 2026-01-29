@@ -27,7 +27,7 @@ const ServicesHome = () => {
           return (
             <div
               key={elem.serviceId}
-              className={`flex gap-[30px] shadow-sm rounded-sm hover:shadow-md ${idx === 2 ? "col-span-2" : ""}`}
+              className={`service-card flex gap-[30px] shadow-sm rounded-sm hover:shadow-lg ${idx === 2 ? "col-span-2" : ""}`}
             >
               <div className="flex flex-col gap-[60px] justify-between p-[30px]">
                 <div className="space-y-[16px]">
@@ -44,14 +44,14 @@ const ServicesHome = () => {
                   </Button>
                 </div>
               </div>
-              <figure>
+              <figure className="overflow-hidden rounded-sm">
                 <img
                   loading="lazy"
                   src={elem.titleImg}
                   alt={`${elem.title} Image`}
                   width="450"
                   height="450"
-                  className="h-full w-[800px] object-cover rounded-sm"
+                  className="service-img h-full w-[800px] object-cover hover:scale-110"
                 />
               </figure>
             </div>

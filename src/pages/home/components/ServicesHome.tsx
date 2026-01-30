@@ -14,8 +14,8 @@ const ServicesHome = () => {
 
   return (
     <section className="custom-container py-[100px]">
-      <div className="flex justify-between pb-[42px]">
-        <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border=b-dark-gray">
+      <div className="flex justify-between pb-[46px]">
+        <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           Services
         </h1>
         <div>

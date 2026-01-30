@@ -1,0 +1,17 @@
+[
+  {
+    "number": "01",
+    "title": "Quality",
+    "description": "We write maintainable, performance focused clean code that scales with your business and stands the test of time."
+  },
+  {
+    "number": "02",
+    "title": "Creativity",
+    "description": "We combine design thinking with solid engineering to create solutions that are both beautiful and functional."
+  },
+  {
+    "number": "03",
+    "title": "Delivery",
+    "description": "We follow structured workflows, clear communication, and realistic timelines to deliver what we promise."
+  }
+]

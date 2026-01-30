@@ -1,6 +1,5 @@
 import Button from "../../../components/shared/Button";
-import servicesInfo from "../../../apis/services/servicesInfo.json";
-import { MdArrowOutward } from "react-icons/md";
+import servicesInfo from "../../../apis/home/services-section/servicesInfo.json";
 
 interface IServicesInfo {
   serviceId: string;
@@ -9,12 +8,12 @@ interface IServicesInfo {
   titleImg: string;
 }
 
-const ServicesHome = () => {
+const ServicesSection = () => {
   const tsServicesInfo = servicesInfo as IServicesInfo[];
 
   return (
     <section className="custom-container py-[100px]">
-      <div className="flex justify-between pb-[46px]">
+      <div className="flex items-center justify-between pb-[60px]">
         <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           Services
         </h1>
@@ -34,13 +33,13 @@ const ServicesHome = () => {
                   <h2 className="font-quicksand text-[30px] font-semibold text-dark-gray leading-[42px]">
                     {elem.title}
                   </h2>
-                  <h3 className="font-quicksand font-medium text-[20px] text-dark-gray">
+                  <h3 className="font-quicksand font-medium text-[20px] text-light-gray">
                     {elem.subtitle}
                   </h3>
                 </div>
                 <div>
                   <Button link={`/services/${elem.serviceId}`}>
-                    Explore More <MdArrowOutward />
+                    Explore More
                   </Button>
                 </div>
               </div>
@@ -62,4 +61,4 @@ const ServicesHome = () => {
   );
 };
 
-export default ServicesHome;
+export default ServicesSection;

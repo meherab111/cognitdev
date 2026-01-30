@@ -1,13 +1,15 @@
-import Hero from "./components/Hero";
-import ServicesHome from "./components/ServicesHome";
-import WhyUs from "./components/WhyUs";
+import ExperienceSection from "./components/ExperienceSection";
+import HeroSection from "./components/HeroSection";
+import ServicesSection from "./components/ServicesSection";
+import WhyUsSection from "./components/WhyUsSection";
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <WhyUs />
-      <ServicesHome />
+      <HeroSection />
+      <WhyUsSection />
+      <ServicesSection />
+      <ExperienceSection />
     </>
   );
 };

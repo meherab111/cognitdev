@@ -19,8 +19,7 @@
   --font-quicksand: "Quicksand", sans-serif;
 
   --color-dark-gray: #191919;
-  --color-medium-gray: #393939;
-  --color-light-gray: #696969;
+  --color-light-gray: #595959;
 
   --color-smoke-white: #fafafa;
 }
@@ -30,7 +29,8 @@
   a,
   .service-card,
   .service-img,
-  .footer-logo {
+  .footer-logo,
+  .experience-box {
     transition: all 0.2s linear;
   }
 

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router";
 
 interface IButton {
@@ -14,7 +15,7 @@ const Button = (props: IButton) => {
       to={link}
       className="inline-flex items-center gap-[6px] px-[20px] py-[12px] font-quicksand text-[18px] rounded-full bg-dark-gray border border-dark-gray text-smoke-white hover:bg-smoke-white hover:text-dark-gray font-medium"
     >
-      {children}
+      {children} <MdArrowOutward />
     </Link>
   );
 };

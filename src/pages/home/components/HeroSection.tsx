@@ -1,6 +1,6 @@
 import Button from "../../../components/shared/Button";
 
-const Hero = () => {
+const HeroSection = () => {
   const heroText: string = "text-dark-gray font-quicksand tracking-tight";
 
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
             CognitDev,
           </h1>
           <h2 className={`${heroText} font-medium text-[52px]`}>
-            a software development company building digital products for your
+            a <span className="text-light-gray">software development company</span> building digital products for your
             business.
           </h2>
         </div>
@@ -31,4 +31,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

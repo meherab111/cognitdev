@@ -23,7 +23,7 @@ const ExperienceSection = () => {
               {elem.label}
             </h2>
           </div>
-
+{/* right border */}
           {idx < borderLength && (
             <div className="border-r-1 border-light-gray"></div>
           )}

@@ -1,0 +1,26 @@
+[
+  {
+    "userImg": "/images/home/testimonials/user-01.webp",
+    "userName": "Sophia Martinez",
+    "userPosition": "Product Manager, Tech Company",
+    "comment": "Working with CognitDev felt like having an in-house development team. They were proactive, detail-oriented, and focused on building a product that truly worked for our users."
+  },
+  {
+    "userImg": "/images/home/testimonials/user-02.webp",
+    "userName": "Emily Watson",
+    "userPosition": "Operations Lead, E-commerce Brand",
+    "comment": "From planning to deployment, CognitDev handled everything professionally. The final product was fast, reliable, and easy for our team to manage."
+  },
+  {
+    "userImg": "/images/home/testimonials/user-03.webp",
+    "userName": "Daniel Kim",
+    "userPosition": "CTO, Digital Platform",
+    "comment": "CognitDev delivered clean, maintainable code and a well-structured architecture. Their engineering-first mindset helped us scale confidently without technical debt."
+  },
+  {
+    "userImg": "/images/home/testimonials/user-04.webp",
+    "userName": "Michael Anderson",
+    "userPosition": "Founder, SaaS Startup",
+    "comment": "CognitDev quickly understood our product requirements and delivered a scalable solution that exceeded our expectations. Their communication and technical expertise made the entire process smooth."
+  }
+]

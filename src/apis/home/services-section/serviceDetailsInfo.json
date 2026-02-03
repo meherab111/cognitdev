@@ -9,8 +9,8 @@
       "Performance & SEO Optimized"
     ],
     "srcImg": [
-      "images/services/service-01/custom-img-1.webp",
-      "images/services/service-01/custom-img-2.webp"
+      "/images/home/services/service-01/custom-img-01.webp",
+      "/images/home/services/service-01/custom-img-02.webp"
     ],
     "offers": [
       {
@@ -41,8 +41,8 @@
       "Scalable & Secure Architecture"
     ],
     "srcImg": [
-      "images/services/service-02/mobile-img-1.webp",
-      "images/services/service-02/mobile-img-2.webp"
+      "/images/home/services/service-02/mobile-img-01.webp",
+      "/images/home/services/service-02/mobile-img-02.webp"
     ],
     "offers": [
       {
@@ -73,8 +73,8 @@
       "Collaborative & Iterative"
     ],
     "srcImg": [
-      "images/services/service-03/ui-img-1.webp",
-      "images/services/service-03/ui-img-2.webp"
+      "/images/home/services/service-03/ui-img-01.webp",
+      "/images/home/services/service-03/ui-img-02.webp"
     ],
     "offers": [
       {
@@ -105,8 +105,8 @@
       "API & Third-Party Integration"
     ],
     "srcImg": [
-      "images/services/service-04/cms-img-1.webp",
-      "images/services/service-04/cms-img-2.webp"
+      "/images/home/services/service-04/cms-img-01.webp",
+      "/images/home/services/service-04/cms-img-02.webp"
     ],
     "offers": [
       {
@@ -137,8 +137,8 @@
       "Faster Release Cycle"
     ],
     "srcImg": [
-      "images/services/service-05/cloud-img-1.webp",
-      "images/services/service-05/cloud-img-2.webp"
+      "/images/home/services/service-05/cloud-img-01.webp",
+      "/images/home/services/service-05/cloud-img-02.webp"
     ],
     "offers": [
       {

@@ -17,7 +17,7 @@ const WhyUsSection = () => {
           Why CognitDev
         </h1>
         <div>
-          <Button link={"/contact"}>Get Started</Button>
+          <Button link={"/contact"} btnTheme={"dark"}>Get Started</Button>
         </div>
       </div>
 

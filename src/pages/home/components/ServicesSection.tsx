@@ -18,7 +18,7 @@ const ServicesSection = () => {
           Services
         </h1>
         <div>
-          <Button link={"/services"}>View All Services</Button>
+          <Button link={"/services"} btnTheme={"dark"}>View All Services</Button>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-[40px]">
@@ -26,11 +26,11 @@ const ServicesSection = () => {
           return (
             <div
               key={elem.serviceId}
-              className={`service-card flex gap-[20px] shadow-sm rounded-sm hover:shadow-lg ${idx === 2 ? "col-span-2" : ""}`}
+              className={`service-card flex gap-[20px] shadow-sm rounded-md hover:shadow-lg ${idx === 2 ? "col-span-2" : ""}`}
             >
               <div className="flex flex-col gap-[60px] justify-between p-[30px]">
                 <div className="space-y-[16px]">
-                  <h2 className="font-quicksand text-[30px] font-semibold text-dark-gray leading-[42px]">
+                  <h2 className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">
                     {elem.title}
                   </h2>
                   <h3 className="font-quicksand font-medium text-[20px] text-light-gray">
@@ -38,12 +38,12 @@ const ServicesSection = () => {
                   </h3>
                 </div>
                 <div>
-                  <Button link={`/services/${elem.serviceId}`}>
+                  <Button link={`/services/${elem.serviceId}`} btnTheme={"dark"}>
                     Explore More
                   </Button>
                 </div>
               </div>
-              <figure className="overflow-hidden rounded-sm">
+              <figure className="overflow-hidden rounded-r-md">
                 <img
                   loading="lazy"
                   src={elem.titleImg}

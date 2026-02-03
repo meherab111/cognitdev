@@ -7,11 +7,12 @@ const HeroSection = () => {
     <section className="custom-container pt-[240px] pb-[100px] flex gap-[30px]">
       <figure>
         <img
-          src="/images/hero/hero-image.webp"
+          src="/images/home/hero/hero-image.webp"
           alt="Hero Background Image"
           width="700"
           height="550"
-          className="h-auto w-[700px] object-cover rounded-sm"
+          loading="eager"
+          className="h-auto w-full max-w-[700px] object-cover rounded-md"
         />
       </figure>
       <div className="space-y-[60px]">
@@ -25,7 +26,7 @@ const HeroSection = () => {
           </h2>
         </div>
 
-        <Button link={"/contact"}>Let's Build Together</Button>
+        <Button link={"/contact"} btnTheme={"dark"}>Let's Build Together</Button>
       </div>
     </section>
   );

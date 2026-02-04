@@ -9,7 +9,7 @@ interface IServicesInfo {
 }
 
 const ServicesSection = () => {
-  const tsServicesInfo = servicesInfo as IServicesInfo[];
+  const tsServicesInfo: IServicesInfo[] = servicesInfo as IServicesInfo[];
 
   return (
     <section className="custom-container py-[100px]">
@@ -18,7 +18,9 @@ const ServicesSection = () => {
           Services
         </h1>
         <div>
-          <Button link={"/services"} btnTheme={"dark"}>View All Services</Button>
+          <Button link={"/services"} btnTheme={"dark"}>
+            View All Services
+          </Button>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-[40px]">
@@ -38,7 +40,10 @@ const ServicesSection = () => {
                   </h3>
                 </div>
                 <div>
-                  <Button link={`/services/${elem.serviceId}`} btnTheme={"dark"}>
+                  <Button
+                    link={`/services/${elem.serviceId}`}
+                    btnTheme={"dark"}
+                  >
                     Explore More
                   </Button>
                 </div>

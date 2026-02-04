@@ -8,7 +8,7 @@ interface IWhyUsInfo {
 }
 
 const WhyUsSection = () => {
-  const tsWhyUsInfo = whyUsInfo as IWhyUsInfo[];
+  const tsWhyUsInfo: IWhyUsInfo[] = whyUsInfo as IWhyUsInfo[];
 
   return (
     <section className="custom-container py-[100px]">
@@ -17,7 +17,9 @@ const WhyUsSection = () => {
           Why CognitDev
         </h1>
         <div>
-          <Button link={"/contact"} btnTheme={"dark"}>Get Started</Button>
+          <Button link={"/contact"} btnTheme={"dark"}>
+            Get Started
+          </Button>
         </div>
       </div>
 

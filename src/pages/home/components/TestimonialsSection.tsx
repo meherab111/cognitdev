@@ -11,7 +11,11 @@ interface ITestimonialsInfo {
 }
 
 const TestimonialsSection = () => {
-  const tsTestimonialsInfo = testimonialsInfo as ITestimonialsInfo[];
+  const tsTestimonialsInfo: ITestimonialsInfo[] =
+    testimonialsInfo as ITestimonialsInfo[];
+
+  const chevronClass: string =
+    "absolute top-[260px] text-smoke-white text-[42px] cursor-pointer";
 
   return (
     <section className="custom-container py-[100px]">
@@ -21,18 +25,17 @@ const TestimonialsSection = () => {
         </h1>
       </div>
 
-      <div className="flex justify-center items-center relative">
+      <div className="flex justify-start relative overflow-x-hidden">
         <div>
-        <FaChevronLeft className="absolute top-[260px] left-[20px] text-smoke-white text-[42px] cursor-pointer" />
-
-        <FaChevronRight className="absolute top-[260px] right-[20px] text-smoke-white text-[42px] cursor-pointer" />
+          <FaChevronLeft className={`left-[20px] ${chevronClass}`} />
+          <FaChevronRight className={`right-[20px] ${chevronClass}`} />
         </div>
 
         {tsTestimonialsInfo.map((elem, idx) => {
           return (
             <div
               key={idx}
-              className="bg-dark-gray flex flex-col gap-[60px] items-center rounded-md py-[60px] px-[90px]"
+              className="bg-dark-gray flex flex-col gap-[60px] justify-center items-center rounded-md py-[60px] px-[90px] w-full min-w-[1280px]"
             >
               <BsFillChatSquareQuoteFill className="text-smoke-white text-[42px]" />
               <h1 className="text-smoke-white font-quicksand font-semibold text-[32px] leading-[42px] text-center">

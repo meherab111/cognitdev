@@ -7,7 +7,8 @@ interface IExperienceInfo {
 }
 
 const ExperienceSection = () => {
-  const tsExperienceInfo = experienceInfo as IExperienceInfo[];
+  const tsExperienceInfo: IExperienceInfo[] =
+    experienceInfo as IExperienceInfo[];
 
   const borderLength: number = tsExperienceInfo.length - 1;
 

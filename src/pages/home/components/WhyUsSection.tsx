@@ -33,7 +33,7 @@ const WhyUsSection = () => {
               <h2 className="text-dark-gray font-quicksand text-[42px] font-semibold">
                 {elem.title}
               </h2>
-              <p className="text-light-gray font-quicksand text-[20px] font-medium">
+              <p className="text-medium-gray font-quicksand text-[20px] font-medium">
                 {elem.description}
               </p>
             </div>

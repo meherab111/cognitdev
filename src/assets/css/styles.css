@@ -19,7 +19,8 @@
   --font-quicksand: "Quicksand", sans-serif;
 
   --color-dark-gray: #191919;
-  --color-light-gray: #595959;
+  --color-medium-gray: #595959;
+  --color-light-gray: #797979;
 
   --color-smoke-white: #fafafa;
 }
@@ -30,8 +31,12 @@
   .service-card,
   .service-img,
   .footer-logo,
-  .experience-box {
+  .experience-box{
     transition: all 0.2s linear;
+  }
+
+  .testimonial-card{
+    transition: all 0.4s ease-in-out;
   }
 
   .contact-spin {

@@ -35,7 +35,7 @@ const ServicesSection = () => {
                   <h2 className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">
                     {elem.title}
                   </h2>
-                  <h3 className="font-quicksand font-medium text-[20px] text-light-gray">
+                  <h3 className="font-quicksand font-medium text-[20px] text-medium-gray">
                     {elem.subtitle}
                   </h3>
                 </div>

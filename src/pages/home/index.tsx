@@ -10,10 +10,10 @@ const Home = () => {
     <>
       <HeroSection />
       <WhyUsSection />
-      <ServicesSection />
       <ExperienceSection />
-      <CtaSection />
+      <ServicesSection />
       <TestimonialsSection />
+      <CtaSection />
     </>
   );
 };

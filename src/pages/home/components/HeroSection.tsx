@@ -21,7 +21,7 @@ const HeroSection = () => {
             CognitDev,
           </h1>
           <h2 className={`${heroText} font-medium text-[52px]`}>
-            a <span className="text-light-gray">software development company</span> building digital products for your
+            a <span className="text-medium-gray">software development company</span> building digital products for your
             business.
           </h2>
         </div>

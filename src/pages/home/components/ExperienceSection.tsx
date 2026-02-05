@@ -13,11 +13,11 @@ const ExperienceSection = () => {
   const borderLength: number = tsExperienceInfo.length - 1;
 
   return (
-    <section className="custom-container flex justify-around gap-[60px] py-[100px]">
+    <section className="custom-container bg-dark-gray flex justify-around gap-[60px] py-[100px] rounded-md">
       {tsExperienceInfo.map((elem, idx) => (
         <React.Fragment key={idx}>
           <div className="experience-box space-y-[20px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2">
-            <h1 className="font-quicksand font-semibold text-center text-[96px] text-dark-gray leading-none">
+            <h1 className="font-quicksand font-semibold text-center text-[96px] text-smoke-white leading-none">
               {elem.stat}
             </h1>
             <h2 className="font-quicksand text-center font-medium text-[20px] text-light-gray">

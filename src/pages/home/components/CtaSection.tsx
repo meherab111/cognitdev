@@ -3,12 +3,12 @@ import Button from "../../../components/shared/Button";
 const CtaSection = () => {
   return (
     <section className="py-[100px]">
-      <div className="custom-container bg-dark-gray flex justify-between items-center rounded-md !px-0">
+      <div className="custom-container bg-dark-gray flex justify-between items-center rounded-md !px-0 py-[60px]">
         <div className="flex flex-col gap-[30px] w-full max-w-[700px] pl-[60px]">
           <h1 className="font-quicksand text-[36px] font-semibold text-smoke-white leading-[46px]">
             Let's Build Software That Works for Your Business Growth
           </h1>
-          <h2 className="font-quicksand font-medium text-[20px] text-smoke-white">
+          <h2 className="font-quicksand font-medium text-[20px] text-light-gray">
             Have an idea, a product plan, or a technical challenge? We're here
             to help you design and build the right solution.
           </h2>

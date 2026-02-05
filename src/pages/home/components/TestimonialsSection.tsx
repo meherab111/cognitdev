@@ -1,6 +1,5 @@
 import { useState } from "react";
 import testimonialsInfo from "../../../apis/home/testimonials/testimonialsInfo.json";
-
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -57,7 +56,8 @@ const TestimonialsSection = () => {
           return (
             <div
               key={idx}
-              className={`flex flex-col gap-[60px] items-center p-[60px] min-w-full testimonial-card -translate-x-[${currentIdx * 100}%]`}
+              className={`flex flex-col gap-[60px] items-center p-[60px] min-w-full testimonial-card`}
+              style={{ transform: `translateX(-${currentIdx * 100}%)` }}
             >
               <BsFillChatSquareQuoteFill className="text-smoke-white text-[42px]" />
               <h1 className="text-smoke-white font-quicksand font-semibold text-[32px] leading-[42px] text-center w-full max-w-[840px]">

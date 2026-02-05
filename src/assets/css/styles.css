@@ -31,11 +31,11 @@
   .service-card,
   .service-img,
   .footer-logo,
-  .experience-box{
+  .experience-box {
     transition: all 0.2s linear;
   }
 
-  .testimonial-card{
+  .testimonial-card {
     transition: all 0.4s ease-in-out;
   }
 
@@ -54,6 +54,34 @@
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 45s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll-right {
+    animation: scroll-right 45s linear infinite;
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
     }
   }
 

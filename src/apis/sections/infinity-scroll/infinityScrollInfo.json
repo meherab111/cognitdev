@@ -1,0 +1,26 @@
+[
+  {
+    "services": [
+      "Custom Web",
+      "Mobile App",
+      "UI/UX Design",
+      "CMS Dev",
+      "Headless Dev",
+      "Cloud Solutions",
+      "DevOps"
+    ],
+    "direction": "left"
+  },
+  {
+    "services": [
+      "Custom Web",
+      "Mobile App",
+      "UI/UX Design",
+      "CMS Dev",
+      "Headless Dev",
+      "Cloud Solutions",
+      "DevOps"
+    ],
+    "direction": "right"
+  }
+]

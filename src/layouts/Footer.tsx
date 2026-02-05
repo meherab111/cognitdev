@@ -7,7 +7,7 @@ interface IFollowInfo {
 }
 
 const Footer = () => {
-  const tsFollowInfo = followInfo as IFollowInfo[];
+  const tsFollowInfo: IFollowInfo[] = followInfo as IFollowInfo[];
 
   return (
     <footer className="h-auto bg-dark-gray">

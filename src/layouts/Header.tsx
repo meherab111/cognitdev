@@ -7,7 +7,7 @@ interface INavInfo {
 }
 
 const Header = () => {
-  const tsNavInfo = navInfo as INavInfo[];
+  const tsNavInfo: INavInfo[] = navInfo as INavInfo[];
 
   return (
     <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-50">

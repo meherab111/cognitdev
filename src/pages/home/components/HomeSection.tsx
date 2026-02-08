@@ -8,7 +8,7 @@ const HomeSection = () => {
       headingChildren={
         <>
           a{" "}
-          <span className="text-medium-gray">software development company</span>{" "}
+          <span className="text-dark-gray">'software development company'</span>{" "}
           building digital products for your business.
         </>
       }

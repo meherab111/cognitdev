@@ -8,7 +8,7 @@ const AboutSection = () => {
       headingChildren={
         <>
           We partner with{" "}
-          <span className="text-medium-gray">startups and businesses</span> to
+          <span className="text-dark-gray">'startups and businesses'</span> to
           turn ideas into well engineered software solutions.
         </>
       }

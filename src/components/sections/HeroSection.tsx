@@ -11,10 +11,8 @@ interface IProps {
 const HeroSection = (props: IProps) => {
   const { imgUrl, headingText, headingChildren, btnText } = props;
 
-  const heroText: string = "text-dark-gray font-quicksand tracking-tight";
-
   return (
-    <section className="custom-container pt-[240px] pb-[100px] flex gap-[30px] items-center">
+    <section className="custom-container pt-[200px] pb-[100px] flex gap-[30px] items-center">
       <figure>
         <img
           src={imgUrl}
@@ -27,10 +25,10 @@ const HeroSection = (props: IProps) => {
       </figure>
       <div className="flex flex-col gap-[60px]">
         <div>
-          <h1 className={`${heroText} font-semibold text-[90px]`}>
+          <h1 className="font-quicksand tracking-tight text-dark-gray font-semibold text-[90px]">
             {headingText}
           </h1>
-          <h2 className={`${heroText} font-medium text-[52px]`}>
+          <h2 className="font-quicksand tracking-tight text-medium-gray font-medium text-[52px]">
             {headingChildren}
           </h2>
         </div>

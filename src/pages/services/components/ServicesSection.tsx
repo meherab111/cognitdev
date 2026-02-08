@@ -8,8 +8,8 @@ const ServicesSection = () => {
       headingChildren={
         <>
           End to end{" "}
-          <span className="text-medium-gray">
-            software development services
+          <span className="text-dark-gray">
+            'software development services'
           </span>{" "}
           tailored to your business needs
         </>

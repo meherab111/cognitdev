@@ -1,4 +1,4 @@
-import Button from "../../../components/shared/Button";
+import Button from "../../components/shared/Button";
 
 const CtaSection = () => {
   return (
@@ -21,7 +21,7 @@ const CtaSection = () => {
         </div>
         <figure>
           <img
-            src="/images/home/cta/cta-home.webp"
+            src="/images/home/cta-section/cta-image.webp"
             alt="CTA Section Image"
             loading="lazy"
             width="550"

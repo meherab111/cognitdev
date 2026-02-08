@@ -14,8 +14,6 @@
   font-display: swap;
 }
 
-/* fonts */
-
 @theme {
   --font-mohave: "Mohave", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
@@ -109,6 +107,7 @@
     }
   }
 }
+
 
 body {
   overflow-x: hidden;

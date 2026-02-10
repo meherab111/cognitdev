@@ -1,3 +1,5 @@
+import CtaSection from "../../components/sections/CtaSection"
+import AboutInformation from "./components/AboutInformation"
 import HeroSection from "./components/HeroSection"
 import ImageSection from "./components/ImageSection"
 
@@ -6,6 +8,8 @@ const About = () => {
     <>
       <HeroSection />
       <ImageSection />
+      <AboutInformation />
+      <CtaSection />
     </>
   )
 }

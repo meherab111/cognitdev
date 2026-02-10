@@ -1,39 +1,60 @@
-const AboutInformation = () => {
-  return (
-    // <section className="custom-container py-[100px]">
-    //   <div className="flex items-center justify-between pb-[60px]">
-    //     <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
-    //       Why CognitDev
-    //     </h1>
-    //     <div>
-    //       <Button link={"/contact"} btnTheme={"dark"}>
-    //         Get Started
-    //       </Button>
-    //     </div>
-    //   </div>
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import servicesInfo from "../../../apis/home/services-section/servicesInfo.json";
 
-    //   <div className="flex gap-[100px]">
-    //     {tsWhyUsInfo.map((elem) => {
-    //       return (
-    //         <div key={elem.number} className="space-y-[30px]">
-    //           <h1 className="text-dark-gray font-quicksand font-semibold text-[130px] leading-none tracking-[-6px]">
-    //             {elem.number}
-    //           </h1>
-    //           <h2 className="text-dark-gray font-quicksand text-[42px] font-semibold">
-    //             {elem.title}
-    //           </h2>
-    //           <p className="text-medium-gray font-quicksand text-[20px] font-medium">
-    //             {elem.description}
-    //           </p>
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
-    // </section>
-    <h1>
-        hello
-    </h1>
-  )
+interface IServiceInfo {
+  serviceId: string;
+  title: string;
 }
 
-export default AboutInformation
+const AboutInformation = () => {
+  const tsServicesInfo: IServiceInfo[] = servicesInfo as IServiceInfo[];
+
+  return (
+    <section className="custom-container py-[100px]">
+      <div className="relative flex justify-between">
+        <div className="sticky top-[100px] h-fit">
+          <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
+            About CognitDev
+          </h1>
+        </div>
+
+        <div className="w-full max-w-[700px] space-y-[40px]">
+          <h2 className="text-dark-gray font-quicksand text-[32px] font-semibold">
+            We're a forward thinking software development company focused on
+            building reliable, scalable, and intelligent digital solutions.
+          </h2>
+          <h3 className="text-medium-gray font-quicksand text-[22px] font-medium">
+            At the core of CognitDev is collaboration. We don't see our clients
+            as just stakeholders. We treat them as partners in the digital
+            product journey. Your ideas, insights, and business knowledge play a
+            vital role in shaping the final result. <br /> By combining your
+            vision with our technical expertise, we create software that is not
+            only functional, but meaningful, future ready, and aligned with your
+            business goals. <br />
+            This collaborative approach helps us deliver products that truly
+            reflect your brand values while solving real world problems through
+            clean architecture and thoughtful engineering.
+          </h3>
+
+          <div className="space-y-[10px]">
+            {tsServicesInfo.map((elem) => {
+              return (
+                <div className="flex items-center gap-[10px]">
+                  <IoMdCheckmarkCircleOutline className="text-[22px]" />
+                  <p
+                    key={elem.serviceId}
+                    className="text-medium-gray font-quicksand text-[22px] font-semibold"
+                  >
+                    {elem.title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutInformation;

@@ -1,9 +1,11 @@
-import AboutSection from "./components/AboutSection"
+import HeroSection from "./components/HeroSection"
+import ImageSection from "./components/ImageSection"
 
 const About = () => {
   return (
     <>
-      <AboutSection />
+      <HeroSection />
+      <ImageSection />
     </>
   )
 }

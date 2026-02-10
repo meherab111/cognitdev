@@ -8,7 +8,7 @@ interface IProps {
   btnText: string;
 }
 
-const HeroSection = (props: IProps) => {
+const Xyz = (props: IProps) => {
   const { imgUrl, headingText, headingChildren, btnText } = props;
 
   return (
@@ -20,15 +20,15 @@ const HeroSection = (props: IProps) => {
           width="700"
           height="550"
           loading="eager"
-          className="h-[550px] w-[700px] object-cover rounded-md"
+          className="h-auto w-[700px] object-cover rounded-md"
         />
       </figure>
       <div className="flex flex-col gap-[60px]">
-        <div>
-          <h1 className="font-quicksand tracking-tight text-dark-gray font-semibold text-[90px]">
+        <div className="space-y-[30px]">
+          <h1 className="font-quicksand tracking-tight text-dark-gray font-semibold text-[90px] leading-none">
             {headingText}
           </h1>
-          <h2 className="font-quicksand tracking-tight text-medium-gray font-medium text-[52px]">
+          <h2 className="font-quicksand tracking-tight text-medium-gray font-medium text-[52px] leading-[66px]">
             {headingChildren}
           </h2>
         </div>
@@ -43,4 +43,4 @@ const HeroSection = (props: IProps) => {
   );
 };
 
-export default HeroSection;
+export default Xyz;

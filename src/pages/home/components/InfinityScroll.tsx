@@ -1,4 +1,4 @@
-import infinityScrollInfo from "../../../apis/sections/infinity-scroll/infinityScrollInfo.json";
+import infinityScrollInfo from "../../../apis/home/infinity-scroll/infinityScrollInfo.json";
 
 interface IInfinityScrollInfo {
   services: string[];

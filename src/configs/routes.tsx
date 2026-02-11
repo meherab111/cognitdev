@@ -1,16 +1,17 @@
 import { createBrowserRouter } from "react-router";
-import RootLayout from "../layouts/RootLayout";
-import Error from "../components/Error";
 import Home from "../pages/home";
 import Contact from "../pages/contact";
 import About from "../pages/about";
 import Services from "../pages/services";
+import RootLayout from "../components/layouts/RootLayout";
+import ErrorPage from "../pages/error";
+import Faq from "../pages/faq";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -21,12 +22,16 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

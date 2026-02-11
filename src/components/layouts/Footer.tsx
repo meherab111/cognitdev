@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import followInfo from "../apis/footer/followInfo.json";
+import followInfo from "../../apis/footer/followInfo.json";
 
 interface IFollowInfo {
   text: string;

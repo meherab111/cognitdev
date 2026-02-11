@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
 
   return (
     <section className="custom-container py-[100px]">
-      <div className=" pb-[60px] flex justify-between items-center">
+      <div className="pb-[60px] flex justify-between items-center">
         <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           Testimonials
         </h1>

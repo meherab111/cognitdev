@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import navInfo from "../apis/header/navInfo.json";
+import navInfo from "../../apis/header/navInfo.json";
 
 interface INavInfo {
   text: string;

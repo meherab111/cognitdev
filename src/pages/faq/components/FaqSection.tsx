@@ -1,14 +1,24 @@
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
+import faqInfo from "../../../apis/faq/faqInfo.json";
+
+interface IFaqInfo {
+  no: string;
+  question: string;
+  answer: string;
+}
 
 const FaqSection = () => {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<null | number>(null);
 
-  const handleToggle = () => {
-    console.log("click");
+  const tsFaqInfo: IFaqInfo[] = faqInfo as IFaqInfo[];
 
-    setToggle(!toggle);
+  const handleToggle = (index: number) => {
+    setToggle(toggle === index ? null : index);
   };
+
+  const questionClass: string =
+    "font-quicksand text-[32px] font-semibold text-dark-gray leading-[32px]";
 
   return (
     <section className="custom-container py-[100px]">
@@ -17,36 +27,35 @@ const FaqSection = () => {
           FAQ
         </h1>
       </div>
-      <div className="flex flex-col gap-[30px]">
-        <div
-          onClick={handleToggle}
-          className="flex gap-[60px] justify-between items-start border-b-1 border-b-light-gray pb-[30px]"
-        >
-          <div className="flex gap-[30px]">
-            <p className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[32px]">
-              01.
-            </p>
+      <div className="flex flex-col gap-[40px]">
+        {tsFaqInfo.map((elem, idx) => {
+          return (
+            <div
+              key={elem.no}
+              onClick={() => handleToggle(idx)}
+              className="flex gap-[60px] justify-between border-b-1 border-b-light-gray/30 pb-[40px] cursor-pointer"
+            >
+              <div className="flex gap-[30px]">
+                <p className={questionClass}>{elem.no}</p>
 
-            <div className="space-y-[20px]">
-              <h2 className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[32px]">
-                What does CognitDev specialize in?
-              </h2>
-              {toggle && (
-                <h3 className="font-quicksand font-medium text-[22px] text-medium-gray">
-                  CognitDev specializes in custom web applications, mobile app
-                  development, CMS & headless solutions, and UI/UX design for
-                  modern businesses.
-                </h3>
-              )}
+                <div className="space-y-[20px]">
+                  <h2 className={questionClass}>{elem.question}</h2>
+                  {idx === toggle && (
+                    <h3 className="font-quicksand font-medium text-[22px] text-medium-gray">
+                      {elem.answer}
+                    </h3>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <ImCross
+                  className={`text-[22px] faq-icon ${idx === toggle ? "rotate-90" : "rotate-45"}`}
+                />
+              </div>
             </div>
-          </div>
-
-          <div>
-            <ImCross
-              className={`text-[22px] transform ${toggle ? "rotate-45" : "rotate-90"} transition-transform`}
-            />
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
   );

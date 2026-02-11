@@ -1,3 +1,4 @@
+import CtaSection from "../../components/sections/CtaSection"
 import FaqSection from "./components/FaqSection"
 import HeroSection from "./components/HeroSection"
 
@@ -6,6 +7,7 @@ const Faq = () => {
     <>
      <HeroSection /> 
      <FaqSection />
+     <CtaSection />
     </>
   )
 }

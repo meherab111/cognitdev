@@ -10,7 +10,7 @@ const Footer = () => {
   const tsFollowInfo: IFollowInfo[] = followInfo as IFollowInfo[];
 
   return (
-    <footer className="h-auto bg-dark-gray">
+    <footer className="bg-dark-gray">
       <div className="custom-container flex justify-between items-center">
         <div className="flex flex-col gap-[60px] pt-[60px] pb-[30px]">
           <div className="w-fit">

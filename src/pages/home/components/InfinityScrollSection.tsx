@@ -1,11 +1,11 @@
-import infinityScrollInfo from "../../../apis/home/infinity-scroll/infinityScrollInfo.json";
+import infinityScrollInfo from "../../../apis/home/infinity-scroll-section/infinityScrollInfo.json";
 
 interface IInfinityScrollInfo {
   services: string[];
   direction: string;
 }
 
-const InfinityScroll = () => {
+const InfinityScrollSection = () => {
   const tsInfinityScrollInfo: IInfinityScrollInfo[] =
     infinityScrollInfo as IInfinityScrollInfo[];
   return (
@@ -49,4 +49,4 @@ const InfinityScroll = () => {
   );
 };
 
-export default InfinityScroll;
+export default InfinityScrollSection;

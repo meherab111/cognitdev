@@ -3,7 +3,7 @@ import { ImCross } from "react-icons/im";
 import faqInfo from "../../../apis/faq/faqInfo.json";
 
 interface IFaqInfo {
-  no: string;
+  number: string;
   question: string;
   answer: string;
 }
@@ -31,12 +31,12 @@ const FaqSection = () => {
         {tsFaqInfo.map((elem, idx) => {
           return (
             <div
-              key={elem.no}
+              key={elem.number}
               onClick={() => handleToggle(idx)}
               className="flex gap-[60px] justify-between border-b-1 border-b-light-gray/30 pb-[40px] cursor-pointer"
             >
               <div className="flex gap-[30px]">
-                <p className={questionClass}>{elem.no}</p>
+                <p className={questionClass}>{elem.number}</p>
 
                 <div className="space-y-[20px]">
                   <h2 className={questionClass}>{elem.question}</h2>

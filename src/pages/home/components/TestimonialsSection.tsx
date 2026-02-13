@@ -1,5 +1,5 @@
 import { useState } from "react";
-import testimonialsInfo from "../../../apis/home/testimonials/testimonialsInfo.json";
+import testimonialsInfo from "../../../apis/home/testimonials-section/testimonialsInfo.json";
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 

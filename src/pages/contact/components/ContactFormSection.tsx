@@ -5,7 +5,7 @@ interface IApiResponse {
   success: boolean;
 }
 
-const ContactForm = () => {
+const ContactFormSection = () => {
   const [submitMsg, setSubmitMsg] = useState<boolean>(false);
 
   const customNotifyObj: SweetAlertOptions = {
@@ -69,7 +69,7 @@ const ContactForm = () => {
           height="500"
           style={{ border: 0 }}
           allowFullScreen
-          loading="lazy"
+          loading="eager"
           referrerPolicy="no-referrer-when-downgrade"
           className="rounded-md w-[600px] h-full"
         />
@@ -114,4 +114,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFormSection;

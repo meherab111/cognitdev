@@ -9,8 +9,8 @@
       "Performance & SEO Optimized"
     ],
     "srcImg": [
-      "/images/home/services/service-01/custom-img-01.webp",
-      "/images/home/services/service-01/custom-img-02.webp"
+      "/images/sections/services-section/service-01/custom-img-01.webp",
+      "/images/sections/services-section/service-01/custom-img-02.webp"
     ],
     "offers": [
       {
@@ -41,8 +41,8 @@
       "Scalable & Secure Architecture"
     ],
     "srcImg": [
-      "/images/home/services/service-02/mobile-img-01.webp",
-      "/images/home/services/service-02/mobile-img-02.webp"
+      "/images/sections/services-section/service-02/mobile-img-01.webp",
+      "/images/sections/services-section/service-02/mobile-img-02.webp"
     ],
     "offers": [
       {
@@ -73,8 +73,8 @@
       "Collaborative & Iterative"
     ],
     "srcImg": [
-      "/images/home/services/service-03/ui-img-01.webp",
-      "/images/home/services/service-03/ui-img-02.webp"
+      "/images/sections/services-section/service-03/ui-img-01.webp",
+      "/images/sections/services-section/service-03/ui-img-02.webp"
     ],
     "offers": [
       {
@@ -102,11 +102,11 @@
       "Custom CMS Setup",
       "Headless Architecture Experts",
       "Secure & Scalable CMS",
-      "API & Third-Party Integration"
+      "API & Third Party Integration"
     ],
     "srcImg": [
-      "/images/home/services/service-04/cms-img-01.webp",
-      "/images/home/services/service-04/cms-img-02.webp"
+      "/images/sections/services-section/service-04/cms-img-01.webp",
+      "/images/sections/services-section/service-04/cms-img-02.webp"
     ],
     "offers": [
       {
@@ -131,30 +131,30 @@
     "serviceId": "service05",
     "title": "Cloud Solutions & DevOps",
     "choices": [
-      "Zero-Downtime Mentality",
-      "Security-First Culture",
-      "Cost-Efficient Scaling",
+      "Zero Downtime Mentality",
+      "Security First Culture",
+      "Cost Efficient Scaling",
       "Faster Release Cycle"
     ],
     "srcImg": [
-      "/images/home/services/service-05/cloud-img-01.webp",
-      "/images/home/services/service-05/cloud-img-02.webp"
+      "/images/sections/services-section/service-05/cloud-img-01.webp",
+      "/images/sections/services-section/service-05/cloud-img-02.webp"
     ],
     "offers": [
       {
-        "heading": "Automated CI/CD Pipelines",
+        "heading": "01. Automated CI/CD Pipelines",
         "description": "We eliminate manual errors by automating your build, test, and deployment processes. This ensures that every code update is safely and consistently pushed to production without disrupting your existing users."
       },
       {
-        "heading": "Managed Cloud Infrastructure",
+        "heading": "02. Managed Cloud Infrastructure",
         "description": "Whether you use AWS, Google Cloud, or Azure, we handle the complex setup and maintenance. We manage your servers, databases, and networking to ensure peak performance and 99.9% uptime."
       },
       {
-        "heading": "Infrastructure as Code (IaC)",
+        "heading": "03. Infrastructure as Code (IaC)",
         "description": "We treat your infrastructure like software, using tools like Terraform or CloudFormation. This allows us to rebuild or duplicate your entire environment in minutes, making disaster recovery and scaling incredibly fast."
       },
       {
-        "heading": "Performance Monitoring & Security",
+        "heading": "04. Performance Monitoring & Security",
         "description": "We provide 24/7 monitoring and real-time alerts to catch issues before your users do. Our proactive approach includes regular security audits and load testing to keep your system robust under pressure."
       }
     ]

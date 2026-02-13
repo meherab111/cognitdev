@@ -1,12 +1,12 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import servicesInfo from "../../../apis/home/services-section/servicesInfo.json";
+import servicesInfo from "../../../apis/sections/services-section/servicesInfo.json";
 
 interface IServiceInfo {
   serviceId: string;
   title: string;
 }
 
-const AboutInformation = () => {
+const AboutInfoSection = () => {
   const tsServicesInfo: IServiceInfo[] = servicesInfo as IServiceInfo[];
 
   return (
@@ -55,4 +55,4 @@ const AboutInformation = () => {
   );
 };
 
-export default AboutInformation;
+export default AboutInfoSection;

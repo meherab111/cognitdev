@@ -1,7 +1,7 @@
 import CtaSection from "../../components/sections/CtaSection";
 import ExperienceSection from "./components/ExperienceSection";
 import HeroSection from "./components/HeroSection";
-import InfinityScroll from "./components/InfinityScroll";
+import InfinityScrollSection from "./components/InfinityScrollSection";
 import ServicesSection from "./components/ServicesSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import WhyUsSection from "./components/WhyUsSection";
@@ -14,7 +14,7 @@ const Home = () => {
       <ExperienceSection />
       <ServicesSection />
       <TestimonialsSection />
-      <InfinityScroll />
+      <InfinityScrollSection />
       <CtaSection />
     </>
   );

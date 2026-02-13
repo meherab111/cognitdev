@@ -1,5 +1,5 @@
 import Button from "../../../components/shared/Button";
-import servicesInfo from "../../../apis/home/services-section/servicesInfo.json";
+import servicesInfo from "../../../apis/sections/services-section/servicesInfo.json";
 
 interface IServicesInfo {
   serviceId: string;

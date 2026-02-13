@@ -6,6 +6,7 @@ import Services from "../pages/services";
 import RootLayout from "../components/layouts/RootLayout";
 import ErrorPage from "../pages/error";
 import Faq from "../pages/faq";
+import ServiceDetailsSection from "../components/sections/ServiceDetailsSection";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/services/service-details",
+        element: <ServiceDetailsSection />,
       },
       {
         path: "/faq",

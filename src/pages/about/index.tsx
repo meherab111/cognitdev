@@ -1,17 +1,17 @@
-import CtaSection from "../../components/sections/CtaSection"
-import AboutInformation from "./components/AboutInformation"
-import HeroSection from "./components/HeroSection"
-import ImageSection from "./components/ImageSection"
+import CtaSection from "../../components/sections/CtaSection";
+import AboutInfoSection from "./components/AboutInfoSection";
+import HeroSection from "./components/HeroSection";
+import ImageSection from "./components/ImageSection";
 
 const About = () => {
   return (
     <>
       <HeroSection />
       <ImageSection />
-      <AboutInformation />
+      <AboutInfoSection />
       <CtaSection />
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

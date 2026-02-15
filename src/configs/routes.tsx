@@ -4,9 +4,9 @@ import Contact from "../pages/contact";
 import About from "../pages/about";
 import Services from "../pages/services";
 import RootLayout from "../components/layouts/RootLayout";
-import ErrorPage from "../pages/error";
 import Faq from "../pages/faq";
 import ServiceDetailsSection from "../pages/services/ServiceDetailsSection";
+import ErrorPage from "../pages/error/ErrorPage";
 
 
 
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <Services />,
       },
       {
-        path: "/services/service-details",
+        path: "/services/:serviceId",
         element: <ServiceDetailsSection />,
       },
       {

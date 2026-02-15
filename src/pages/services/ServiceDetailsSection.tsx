@@ -1,5 +1,6 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import Button from "../shared/Button";
+import Button from "../../components/shared/Button";
+
 
 const ServiceDetailsSection = () => {
   return (

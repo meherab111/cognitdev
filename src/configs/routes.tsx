@@ -6,7 +6,9 @@ import Services from "../pages/services";
 import RootLayout from "../components/layouts/RootLayout";
 import ErrorPage from "../pages/error";
 import Faq from "../pages/faq";
-import ServiceDetailsSection from "../components/sections/ServiceDetailsSection";
+import ServiceDetailsSection from "../pages/services/ServiceDetailsSection";
+
+
 
 const router = createBrowserRouter([
   {

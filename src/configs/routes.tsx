@@ -4,17 +4,20 @@ import Contact from "../pages/contact";
 import About from "../pages/about";
 import Services from "../pages/services";
 import RootLayout from "../components/layouts/RootLayout";
+import ErrorSection from "../pages/error/ErrorSection";
 import Faq from "../pages/faq";
-import ServiceDetailsSection from "../pages/services/ServiceDetailsSection";
-import ErrorPage from "../pages/error/ErrorPage";
+import { lazy, Suspense } from "react";
+import LoaderSection from "../components/sections/LoaderSection";
 
-
+const DelayedServiceDetailsSection = lazy(
+  () => import("../pages/services/ServiceDetailsSection"),
+);
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorSection />,
     children: [
       {
         path: "/",
@@ -30,7 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/services/:serviceId",
-        element: <ServiceDetailsSection />,
+        element: (
+          <Suspense fallback={<LoaderSection />}>
+            <DelayedServiceDetailsSection />
+          </Suspense>
+        ),
       },
       {
         path: "/faq",

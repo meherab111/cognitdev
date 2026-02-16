@@ -1,6 +1,6 @@
 import Button from "../../components/shared/Button";
 
-const ErrorPage = () => {
+const ErrorSection = () => {
   return (
     <section className="custom-container pt-[200px] pb-[100px] flex flex-col items-center gap-[60px]">
       <h1 className="text-[300px] text-dark-gray font-semibold font-mohave leading-none">
@@ -18,4 +18,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default ErrorSection;

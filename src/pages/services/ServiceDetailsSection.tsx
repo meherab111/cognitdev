@@ -3,7 +3,7 @@ import Button from "../../components/shared/Button";
 import serviceDetailsInfo from "../../apis/sections/services-section/serviceDetailsInfo.json";
 import ServiceDetailsImage from "../../components/sections/ServiceDetailsImage";
 import { useParams } from "react-router";
-import ErrorPage from "../error/ErrorPage";
+import ErrorSection from "../error/ErrorSection";
 
 interface IParams {
   [key: string]: string;
@@ -35,7 +35,7 @@ const ServiceDetailsSection = () => {
   );
 
   if (!findServiceDetailsInfo) {
-    return <ErrorPage />;
+    return <ErrorSection />;
   }
 
   return (

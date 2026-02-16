@@ -101,6 +101,34 @@
     }
   }
 
+  .loader-one {
+    animation: loader-one 1s linear infinite;
+  }
+
+  .loader-two {
+    animation: loader-two 1.5s linear infinite;
+  }
+
+  @keyframes loader-one {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loader-two {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
   .custom-container {
     width: 100%;
     padding-inline: 20px;

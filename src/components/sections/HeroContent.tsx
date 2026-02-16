@@ -16,11 +16,13 @@ const HeroContent = (props: IProps) => {
     >
       {children}
 
-      <div>
-        <Button link={"/contact"} btnTheme={"dark"}>
-          {btnText}
-        </Button>
-      </div>
+      {btnText && (
+        <div className="none">
+          <Button link={"/contact"} btnTheme={"dark"}>
+            {btnText}
+          </Button>
+        </div>
+      )}
     </section>
   );
 };

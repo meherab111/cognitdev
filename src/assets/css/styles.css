@@ -152,7 +152,12 @@
   }
 }
 
+html,
+body {
+  width: 100%;
+  background-color: var(--color-smoke-white);
+}
+
 body {
   overflow-x: hidden;
-  background-color: var(--color-smoke-white);
 }

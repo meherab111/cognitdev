@@ -1,21 +1,14 @@
 import React from "react";
-import experienceInfo from "../../../apis/home/experience-section/experienceInfo.json";
-
-interface IExperienceInfo {
-  stat: string;
-  label: string;
-}
+import experienceInfo from "../../../apis/home/experience-section/experienceInfo";
+import type { IExperienceInfo } from "../../../types/home/experience-section/typesExperienceInfo";
 
 const ExperienceSection = () => {
-  const tsExperienceInfo: IExperienceInfo[] =
-    experienceInfo as IExperienceInfo[];
-
-  const borderLength: number = tsExperienceInfo.length - 1;
+  const borderLength: number = experienceInfo.length - 1;
 
   return (
     <section className="py-[100px]">
       <div className="custom-container bg-dark-gray flex justify-around gap-[60px] rounded-md py-[60px]">
-        {tsExperienceInfo.map((elem, idx) => (
+        {experienceInfo.map((elem: IExperienceInfo, idx: number) => (
           <React.Fragment key={idx}>
             <div className="experience-box space-y-[20px] cursor-pointer hover:-translate-y-2">
               <h1 className="font-quicksand font-semibold text-center text-[96px] text-smoke-white leading-none">

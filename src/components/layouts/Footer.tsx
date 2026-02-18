@@ -1,14 +1,8 @@
 import { Link } from "react-router";
-import followInfo from "../../apis/footer/followInfo.json";
-
-interface IFollowInfo {
-  text: string;
-  link: string;
-}
+import followInfo from "../../apis/footer/followInfo";
+import type { IFollowInfo } from "../../types/footer/typesFollowInfo";
 
 const Footer = () => {
-  const tsFollowInfo: IFollowInfo[] = followInfo as IFollowInfo[];
-
   return (
     <footer className="bg-dark-gray">
       <div className="custom-container flex justify-between items-center">
@@ -30,7 +24,7 @@ const Footer = () => {
 
           <nav>
             <ul className="flex gap-[20px]">
-              {tsFollowInfo.map((elem, idx) => {
+              {followInfo.map((elem: IFollowInfo, idx: number) => {
                 return (
                   <li key={idx}>
                     <a

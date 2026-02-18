@@ -1,17 +1,10 @@
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
-import faqInfo from "../../../apis/faq/faqInfo.json";
-
-interface IFaqInfo {
-  number: string;
-  question: string;
-  answer: string;
-}
+import faqInfo from "../../../apis/faq/faqInfo";
+import type { IFaqInfo } from "../../../types/faq/typesFaqInfo";
 
 const FaqSection = () => {
   const [toggle, setToggle] = useState<null | number>(null);
-
-  const tsFaqInfo: IFaqInfo[] = faqInfo as IFaqInfo[];
 
   const handleToggle = (index: number) => {
     setToggle(toggle === index ? null : index);
@@ -28,7 +21,7 @@ const FaqSection = () => {
         </h1>
       </div>
       <div className="flex flex-col gap-[40px]">
-        {tsFaqInfo.map((elem, idx) => {
+        {faqInfo.map((elem: IFaqInfo, idx: number) => {
           return (
             <div
               key={elem.number}

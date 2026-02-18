@@ -1,14 +1,8 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import servicesInfo from "../../../apis/sections/services-section/servicesInfo.json";
-
-interface IServiceInfo {
-  serviceId: string;
-  title: string;
-}
+import servicesInfo from "../../../apis/services/servicesInfo";
+import type { IServicesInfo } from "../../../types/services/typesServicesInfo";
 
 const AboutInfoSection = () => {
-  const tsServicesInfo: IServiceInfo[] = servicesInfo as IServiceInfo[];
-
   return (
     <section className="custom-container py-[100px] relative flex justify-between">
       <div className="sticky top-[100px] h-fit">
@@ -36,7 +30,7 @@ const AboutInfoSection = () => {
         </h3>
 
         <div className="space-y-[10px]">
-          {tsServicesInfo.map((elem) => {
+          {servicesInfo.map((elem: IServicesInfo) => {
             return (
               <div className="flex items-center gap-[10px]">
                 <IoMdCheckmarkCircleOutline className="text-[22px]" />

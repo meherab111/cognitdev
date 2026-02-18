@@ -1,37 +1,23 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Button from "../../components/shared/Button";
-import serviceDetailsInfo from "../../apis/sections/services-section/serviceDetailsInfo.json";
 import ServiceDetailsImage from "../../components/sections/ServiceDetailsImage";
 import { useParams } from "react-router";
 import ErrorSection from "../error/ErrorSection";
+import type { IOffers, IServiceDetailsInfo } from "../../types/services/typesServiceDetailsInfo";
+import serviceDetailsInfo from "../../apis/services/serviceDetailsInfo";
 
 interface IParams {
   [key: string]: string;
   serviceId: string;
 }
 
-interface IOffers {
-  number: string;
-  heading: string;
-  description: string;
-}
-
-interface IServiceDetailsInfo {
-  serviceId: string;
-  title: string;
-  choices: string[];
-  srcImg: string[];
-  offers: IOffers[];
-}
 
 const ServiceDetailsSection = () => {
   const { serviceId } = useParams<IParams>();
 
-  const tsServiceDetailsInfo: IServiceDetailsInfo[] =
-    serviceDetailsInfo as IServiceDetailsInfo[];
 
-  const findServiceDetailsInfo = tsServiceDetailsInfo.find(
-    (elem) => elem.serviceId === serviceId,
+  const findServiceDetailsInfo: IServiceDetailsInfo | undefined = serviceDetailsInfo.find(
+    (elem: IServiceDetailsInfo) => elem.serviceId === serviceId,
   );
 
   if (!findServiceDetailsInfo) {
@@ -47,7 +33,7 @@ const ServiceDetailsSection = () => {
       </div>
 
       <div className="grid grid-cols-2 w-fit mx-auto py-[40px] gap-[40px]">
-        {findServiceDetailsInfo.choices.map((choice, idx) => {
+        {findServiceDetailsInfo.choices.map((choice: string, idx: number) => {
           return (
             <div key={idx} className="flex items-center gap-[10px]">
               <IoMdCheckmarkCircleOutline className="text-[32px]" />
@@ -62,7 +48,7 @@ const ServiceDetailsSection = () => {
       <ServiceDetailsImage imgSrc={findServiceDetailsInfo.srcImg[0]} />
 
       <div className="grid grid-cols-2 w-fit mx-auto py-[40px] gap-[40px]">
-        {findServiceDetailsInfo.offers.map((offer, idx) => {
+        {findServiceDetailsInfo.offers.map((offer: IOffers, idx: number) => {
           return (
             <div key={idx} className="flex gap-[20px]">
               <p className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">

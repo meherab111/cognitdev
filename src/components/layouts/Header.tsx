@@ -1,14 +1,8 @@
 import { Link } from "react-router";
-import navInfo from "../../apis/header/navInfo.json";
-
-interface INavInfo {
-  text: string;
-  path: string;
-}
+import navInfo from "../../apis/header/navInfo";
+import type { INavInfo } from "../../types/header/typesNavInfo";
 
 const Header = () => {
-  const tsNavInfo: INavInfo[] = navInfo as INavInfo[];
-
   return (
     <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-50">
       <nav className="custom-container h-[100px] flex justify-between items-center ">
@@ -22,7 +16,7 @@ const Header = () => {
           />
         </Link>
         <ul className="flex gap-[30px]">
-          {tsNavInfo.map((elem, idx) => {
+          {navInfo.map((elem: INavInfo, idx: number) => {
             return (
               <li key={idx}>
                 <Link

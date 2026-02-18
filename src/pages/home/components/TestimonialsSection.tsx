@@ -1,25 +1,16 @@
 import { useState } from "react";
-import testimonialsInfo from "../../../apis/home/testimonials-section/testimonialsInfo.json";
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
-interface ITestimonialsInfo {
-  userImg: string;
-  userName: string;
-  userPosition: string;
-  comment: string;
-}
+import testimonialsInfo from "../../../apis/home/testimonials-section/testimonialsInfo";
+import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonialsInfo";
 
 const TestimonialsSection = () => {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
 
-  const tsTestimonialsInfo: ITestimonialsInfo[] =
-    testimonialsInfo as ITestimonialsInfo[];
-
   const chevronClass: string = "text-dark-gray text-[32px] cursor-pointer";
 
   const handleLeftClick = () => {
-    let lastElement: number = tsTestimonialsInfo.length - 1;
+    let lastElement: number = testimonialsInfo.length - 1;
 
     setCurrentIdx((prev: number): number => {
       return prev === 0 ? lastElement : prev - 1;
@@ -27,7 +18,7 @@ const TestimonialsSection = () => {
   };
 
   const handleRightClick = () => {
-    let lastElement: number = tsTestimonialsInfo.length - 1;
+    let lastElement: number = testimonialsInfo.length - 1;
 
     setCurrentIdx((prev: number): number => {
       return prev === lastElement ? 0 : prev + 1;
@@ -52,7 +43,7 @@ const TestimonialsSection = () => {
       </div>
 
       <div className="bg-dark-gray flex justify-start rounded-md overflow-x-hidden">
-        {tsTestimonialsInfo.map((elem, idx) => {
+        {testimonialsInfo.map((elem: ITestimonialsInfo, idx: number) => {
           return (
             <div
               key={idx}

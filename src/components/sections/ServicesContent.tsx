@@ -1,12 +1,6 @@
+import servicesInfo from "../../apis/services/servicesInfo";
 import Button from "../../components/shared/Button";
-import servicesInfo from "../../apis/sections/services-section/servicesInfo.json";
-
-interface IServicesInfo {
-  serviceId: string;
-  title: string;
-  subtitle: string;
-  titleImg: string;
-}
+import type { IServicesInfo } from "../../types/services/typesServicesInfo";
 
 interface IProps {
   slicedServicesLayout: boolean;
@@ -17,13 +11,11 @@ interface IProps {
 const ServicesContent = (props: IProps) => {
   const { slicedServicesLayout, btn, colSpan } = props;
 
-  const tsServicesInfo: IServicesInfo[] = servicesInfo as IServicesInfo[];
-
-  const slicedTsServicesInfo: IServicesInfo[] = tsServicesInfo.slice(0, 3);
+  const slicedTsServicesInfo: IServicesInfo[] = servicesInfo.slice(0, 3);
 
   const displayTsServicesInfo: IServicesInfo[] = slicedServicesLayout
     ? slicedTsServicesInfo
-    : tsServicesInfo;
+    : servicesInfo;
 
   return (
     <section className="custom-container py-[100px]">
@@ -48,7 +40,7 @@ const ServicesContent = (props: IProps) => {
       </div>
 
       <div className="grid grid-cols-2 gap-[40px]">
-        {displayTsServicesInfo.map((elem, idx) => {
+        {displayTsServicesInfo.map((elem: IServicesInfo, idx: number) => {
           const colSpanClass: string = idx === 2 ? "col-span-2" : "";
 
           return (

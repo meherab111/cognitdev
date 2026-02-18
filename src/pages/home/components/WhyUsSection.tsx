@@ -1,15 +1,8 @@
-import whyUsInfo from "../../../apis/home/why-us-section/whyUsInfo.json";
+import whyUsInfo from "../../../apis/home/why-us-section/whyUsInfo";
 import Button from "../../../components/shared/Button";
-
-interface IWhyUsInfo {
-  number: string;
-  title: string;
-  description: string;
-}
+import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUsInfo";
 
 const WhyUsSection = () => {
-  const tsWhyUsInfo: IWhyUsInfo[] = whyUsInfo as IWhyUsInfo[];
-
   return (
     <section className="custom-container py-[100px]">
       <div className="flex items-center justify-between pb-[60px]">
@@ -24,7 +17,7 @@ const WhyUsSection = () => {
       </div>
 
       <div className="flex gap-[100px]">
-        {tsWhyUsInfo.map((elem) => {
+        {whyUsInfo.map((elem: IWhyUsInfo) => {
           return (
             <div key={elem.number} className="space-y-[30px]">
               <h1 className="text-dark-gray font-quicksand font-semibold text-[130px] leading-none tracking-[-6px]">

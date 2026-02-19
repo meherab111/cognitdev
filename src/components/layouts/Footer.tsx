@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import followInfo from "../../apis/footer/followInfo";
-import type { IFollowInfo } from "../../types/footer/typesFollowInfo";
+import type { IFollowInfo } from "../../types/footer/typesFollow";
 
 const Footer = () => {
   return (

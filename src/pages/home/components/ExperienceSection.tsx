@@ -1,6 +1,6 @@
 import React from "react";
 import experienceInfo from "../../../apis/home/experience-section/experienceInfo";
-import type { IExperienceInfo } from "../../../types/home/experience-section/typesExperienceInfo";
+import type { IExperienceInfo } from "../../../types/home/experience-section/typesExperience";
 
 const ExperienceSection = () => {
   const borderLength: number = experienceInfo.length - 1;

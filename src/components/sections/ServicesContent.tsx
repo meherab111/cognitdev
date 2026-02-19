@@ -1,6 +1,6 @@
 import servicesInfo from "../../apis/services/servicesInfo";
 import Button from "../../components/shared/Button";
-import type { IServicesInfo } from "../../types/services/typesServicesInfo";
+import type { IServicesInfo } from "../../types/services/typesServices";
 
 interface IProps {
   slicedServicesLayout: boolean;

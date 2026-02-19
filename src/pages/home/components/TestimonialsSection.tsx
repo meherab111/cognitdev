@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import testimonialsInfo from "../../../apis/home/testimonials-section/testimonialsInfo";
-import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonialsInfo";
+import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonials";
 
 const TestimonialsSection = () => {
   const [currentIdx, setCurrentIdx] = useState<number>(0);

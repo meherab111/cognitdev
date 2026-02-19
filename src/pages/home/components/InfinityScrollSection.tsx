@@ -1,5 +1,5 @@
 import infinityScrollInfo from "../../../apis/home/infinity-scroll-section/infinityScrollInfo";
-import type { IInfinityScrollInfo } from "../../../types/home/infinity-scroll-section/typesInfinityScrollInfo";
+import type { IInfinityScrollInfo } from "../../../types/home/infinity-scroll-section/typesInfinityScroll";
 
 const InfinityScrollSection = () => {
   return (

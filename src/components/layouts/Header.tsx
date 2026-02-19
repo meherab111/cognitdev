@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import navInfo from "../../apis/header/navInfo";
-import type { INavInfo } from "../../types/header/typesNavInfo";
+import type { INavInfo } from "../../types/header/typesNav";
 
 const Header = () => {
   return (
-    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-50">
-      <nav className="custom-container h-[100px] flex justify-between items-center ">
+    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-10">
+      <nav className="custom-container h-[100px] flex justify-between items-center">
         <Link to={"/"} aria-label="CognitDev Home">
           <img
             src="/images/logo/cognitdev-logo.webp"

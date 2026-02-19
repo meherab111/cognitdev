@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import faqInfo from "../../../apis/faq/faqInfo";
-import type { IFaqInfo } from "../../../types/faq/typesFaqInfo";
+import type { IFaqInfo } from "../../../types/faq/typesFaq";
 
 const FaqSection = () => {
   const [toggle, setToggle] = useState<null | number>(null);

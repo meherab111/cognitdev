@@ -3,7 +3,10 @@ import Button from "../../components/shared/Button";
 import ServiceDetailsImage from "../../components/sections/ServiceDetailsImage";
 import { useParams } from "react-router";
 import ErrorSection from "../error/ErrorSection";
-import type { IOffers, IServiceDetailsInfo } from "../../types/services/typesServiceDetailsInfo";
+import type {
+  IOffers,
+  IServiceDetailsInfo,
+} from "../../types/services/typesServiceDetails";
 import serviceDetailsInfo from "../../apis/services/serviceDetailsInfo";
 
 interface IParams {
@@ -11,14 +14,13 @@ interface IParams {
   serviceId: string;
 }
 
-
 const ServiceDetailsSection = () => {
   const { serviceId } = useParams<IParams>();
 
-
-  const findServiceDetailsInfo: IServiceDetailsInfo | undefined = serviceDetailsInfo.find(
-    (elem: IServiceDetailsInfo) => elem.serviceId === serviceId,
-  );
+  const findServiceDetailsInfo: IServiceDetailsInfo | undefined =
+    serviceDetailsInfo.find(
+      (elem: IServiceDetailsInfo) => elem.serviceId === serviceId,
+    );
 
   if (!findServiceDetailsInfo) {
     return <ErrorSection />;

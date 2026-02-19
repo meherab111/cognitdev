@@ -1,6 +1,6 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import servicesInfo from "../../../apis/services/servicesInfo";
-import type { IServicesInfo } from "../../../types/services/typesServicesInfo";
+import type { IServicesInfo } from "../../../types/services/typesServices";
 
 const AboutInfoSection = () => {
   return (

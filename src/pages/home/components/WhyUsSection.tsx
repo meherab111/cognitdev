@@ -1,6 +1,6 @@
 import whyUsInfo from "../../../apis/home/why-us-section/whyUsInfo";
 import Button from "../../../components/shared/Button";
-import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUsInfo";
+import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUs";
 
 const WhyUsSection = () => {
   return (

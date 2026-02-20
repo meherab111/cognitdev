@@ -8,7 +8,6 @@ import ErrorSection from "../pages/error/ErrorSection";
 import Faq from "../pages/faq";
 import { lazy, Suspense } from "react";
 import LoaderSection from "../components/sections/LoaderSection";
-import PreLoader from "../components/layouts/PreLoader";
 
 const DelayedServiceDetailsSection = lazy(
   () => import("../pages/services/ServiceDetailsSection"),
@@ -47,10 +46,6 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
-      },
-      {
-        path: "/load",
-        element: <PreLoader />
       }
     ],
   },

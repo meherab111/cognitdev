@@ -88,19 +88,6 @@
     }
   }
 
-  .custom-scrollbar {
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: var(--color-dark-gray);
-      border-radius: 6px;
-    }
-  }
-
   .loader-one {
     animation: loader-one 1s linear infinite;
   }
@@ -149,6 +136,20 @@
     @media (width >= 80rem) {
       max-width: 80rem;
     }
+  }
+}
+
+html,
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--color-light-gray);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-dark-gray);
+    border-radius: 6px;
   }
 }
 

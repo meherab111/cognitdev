@@ -139,6 +139,15 @@
   }
 }
 
+@layer components {
+  .mobile-navbar {
+    @media (width <= 640px) {
+      @apply absolute right-0 top-0 w-1/2 min-h-screen 
+             bg-red-200 p-[20px] flex-col;
+    }
+  }
+}
+
 html,
 .custom-scrollbar {
   &::-webkit-scrollbar {

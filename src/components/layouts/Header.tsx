@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import navInfo from "../../apis/header/navInfo";
 import type { INavInfo } from "../../types/header/typesNav";
+import { HiMiniBars2 } from "react-icons/hi2";
+import { RxCross2 } from "react-icons/rx";
 
 const Header = () => {
   return (
@@ -15,7 +17,7 @@ const Header = () => {
             className="h-auto w-[54px] object-contain"
           />
         </Link>
-        <ul className="flex gap-[30px]">
+        <ul className="mobile-navbar flex gap-[30px]">
           {navInfo.map((elem: INavInfo, idx: number) => {
             return (
               <li key={idx}>
@@ -29,6 +31,10 @@ const Header = () => {
               </li>
             );
           })}
+          <div>
+            <HiMiniBars2 className="text-[36px] text-dark-gray hidden" />
+            <RxCross2 className="text-[36px] text-dark-gray hidden" />
+          </div>
         </ul>
       </nav>
     </header>

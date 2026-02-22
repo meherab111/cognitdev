@@ -3,10 +3,9 @@ import navInfo from "../../apis/header/navInfo";
 import type { INavInfo } from "../../types/header/typesNav";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const Header = () => {
-  const headerContainer = useRef<HTMLDivElement | null>(null);
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
 
   const handleCloseSidebar = () => {
@@ -14,10 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header
-      ref={headerContainer}
-      className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-10"
-    >
+    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-10">
       <nav className="custom-container h-[100px] flex justify-between items-center">
         <Link to={"/"} onClick={handleCloseSidebar} aria-label="CognitDev Home">
           <img

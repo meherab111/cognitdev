@@ -3,22 +3,21 @@ import navInfo from "../../apis/header/navInfo";
 import type { INavInfo } from "../../types/header/typesNav";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
-import { useState } from "react";
-import { useGSAP } from "@gsap/react";
+import { useRef, useState } from "react";
 
 const Header = () => {
+  const headerContainer = useRef<HTMLDivElement | null>(null);
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
 
   const handleCloseSidebar = () => {
     setOpenSidebar(false);
   };
 
-  useGSAP(() => {
-    
-  })
-
   return (
-    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-10">
+    <header
+      ref={headerContainer}
+      className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-10"
+    >
       <nav className="custom-container h-[100px] flex justify-between items-center">
         <Link to={"/"} onClick={handleCloseSidebar} aria-label="CognitDev Home">
           <img
@@ -26,7 +25,7 @@ const Header = () => {
             alt="CognitDev Logo"
             width="60"
             height="60"
-            className="h-auto w-[54px] object-contain"
+            className="h-auto w-[50px] md:w-[54px] object-contain"
           />
         </Link>
         <button
@@ -42,7 +41,9 @@ const Header = () => {
           )}
         </button>
         <ul
-          className={`${openSidebar ? "mobile-navbar" : "hidden sm:flex gap-[30px]"}`}
+          className={`mobile-navbar ${
+            openSidebar ? "translate-x-0" : "translate-x-full sm:translate-x-0"
+          }`}
         >
           {navInfo.map((elem: INavInfo, idx: number) => {
             return (
@@ -51,7 +52,7 @@ const Header = () => {
                   to={elem.path}
                   onClick={handleCloseSidebar}
                   aria-label={elem.text}
-                  className="font-quicksand font-semibold text-[26px] sm:text-[18px] text-dark-gray hover:text-light-gray/70 border-b-2 border-b-dark-gray hover:border-b-smoke-white"
+                  className="font-quicksand font-semibold text-[24px] sm:text-[18px] text-dark-gray hover:text-light-gray/70 border-b-2 border-b-dark-gray hover:border-b-smoke-white"
                 >
                   {elem.text}
                 </Link>

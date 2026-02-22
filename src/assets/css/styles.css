@@ -38,7 +38,8 @@
     transition: all 0.2s linear;
   }
 
-  .testimonial-card {
+  .testimonial-card,
+  .mobile-navbar {
     transition: all 0.4s ease-in-out;
   }
 

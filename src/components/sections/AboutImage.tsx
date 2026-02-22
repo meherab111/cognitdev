@@ -1,19 +1,24 @@
 interface IProps {
   imgSrc: string;
+  imgSize: "large" | "small";
+  width: "800" | "500";
+  height: "550" | "400";
 }
 
 const AboutImage = (props: IProps) => {
-  const { imgSrc } = props;
+  const { imgSrc, imgSize, width, height } = props;
+
+  imgSize === "large" ? "max-w-[800px]" : "max-w-[500px]";
 
   return (
     <figure>
       <img
         src={imgSrc}
-        alt="About Image One"
-        width="800"
-        height="550"
+        alt="About Images"
+        width={width}
+        height={height}
         loading="lazy"
-        className="h-auto w-full max-w-[800px] object-cover rounded-md"
+        className={`h-auto w-full ${imgSize} object-cover rounded-md`}
       />
     </figure>
   );

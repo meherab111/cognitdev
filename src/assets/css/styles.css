@@ -141,9 +141,11 @@
 
 @layer components {
   .mobile-navbar {
+    @apply hidden sm:flex sm:gap-[30px];
+
     @media (width <= 640px) {
-      @apply absolute right-0 top-0 w-1/2 min-h-screen 
-             bg-red-200 p-[20px] flex-col;
+      @apply fixed z-50 right-0 top-0 w-1/2 min-h-screen 
+             bg-smoke-white px-[20px] py-[100px] flex flex-col items-end gap-[30px];
     }
   }
 }

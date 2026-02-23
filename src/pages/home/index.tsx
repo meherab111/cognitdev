@@ -13,9 +13,9 @@ const Home = () => {
       <WhyUsSection />
       <ExperienceSection />
       <ServicesSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection />
       <InfinityScrollSection />
-      <CtaSection />
+      <CtaSection /> */}
     </>
   );
 };

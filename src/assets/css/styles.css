@@ -39,7 +39,7 @@
   }
 
   .testimonial-card,
-  .mobile-navbar {
+  .mobile-navbar, .navbarIcon, .bg-overlay {
     transition: all 0.4s ease-in-out;
   }
 

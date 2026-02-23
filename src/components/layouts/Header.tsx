@@ -12,9 +12,12 @@ const Header = () => {
     setOpenSidebar(false);
   };
 
+  const navbarIconClass: string =
+    "text-[38px] text-dark-gray absolute navbarIcon";
+
   return (
-    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-10">
-      <nav className="custom-container h-[100px] flex justify-between items-center">
+    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-100">
+      <nav className="custom-container relative h-[100px] flex justify-between items-center">
         <Link to={"/"} onClick={handleCloseSidebar} aria-label="CognitDev Home">
           <img
             src="/images/logo/cognitdev-logo.webp"
@@ -28,14 +31,27 @@ const Header = () => {
           onClick={() => {
             setOpenSidebar(!openSidebar);
           }}
-          className="z-100 relative sm:hidden navbar-btn"
+          className="z-100 relative sm:hidden w-[38px] h-[40px] flex items-center justify-center"
         >
-          {openSidebar ? (
-            <RxCross2 className="text-[38px] text-dark-gray" />
-          ) : (
-            <HiMiniBars2 className="text-[38px] text-dark-gray" />
-          )}
+          <RxCross2
+            className={`${navbarIconClass} ${
+              openSidebar ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
+            }`}
+          />
+          <HiMiniBars2
+            className={`${navbarIconClass} ${
+              openSidebar ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
+            }`}
+          />
         </button>
+
+        <div
+          onClick={handleCloseSidebar}
+          className={`fixed inset-0 bg-dark-gray/20 backdrop-blur-xs w-full min-h-screen z-50 bg-overlay sm:hidden ${
+            openSidebar ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
         <ul
           className={`mobile-navbar ${
             openSidebar ? "translate-x-0" : "translate-x-full sm:translate-x-0"

@@ -26,7 +26,7 @@ const ServicesContent = (props: IProps) => {
             : "w-fit pb-[60px]"
         }
       >
-        <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
+        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           Services
         </h1>
 
@@ -39,21 +39,22 @@ const ServicesContent = (props: IProps) => {
         )}
       </div>
 
-      <div className="grid grid-cols-2 gap-[40px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] md:gap-[40px]">
         {displayTsServicesInfo.map((elem: IServicesInfo, idx: number) => {
-          const colSpanClass: string = idx === 2 ? "col-span-2" : "";
+          const colSpanClass: string =
+            idx === 2 ? "col-span-1 lg:col-span-2" : "";
 
           return (
             <div
               key={elem.serviceId}
-              className={`service-card flex gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
+              className={`service-card flex flex-col-reverse sm:flex-row gap-[12px] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
-              <div className="flex flex-col gap-[60px] justify-between p-[30px]">
+              <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] justify-between p-[12px] sm:p-[20px] md:p-[30px]">
                 <div className="space-y-[16px]">
-                  <h2 className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">
+                  <h2 className="font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
                     {elem.title}
                   </h2>
-                  <h3 className="font-quicksand font-medium text-[20px] text-medium-gray">
+                  <h3 className="font-quicksand font-medium text-[18px] md:text-[20px] text-medium-gray">
                     {elem.subtitle}
                   </h3>
                 </div>

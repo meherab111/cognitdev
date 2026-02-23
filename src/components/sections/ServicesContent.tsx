@@ -18,12 +18,12 @@ const ServicesContent = (props: IProps) => {
     : servicesInfo;
 
   return (
-    <section className="custom-container py-[100px]">
+    <section className="custom-container py-[50px] md:py-[100px]">
       <div
         className={
           btn
-            ? "flex items-center justify-between pb-[60px]"
-            : "w-fit pb-[60px]"
+            ? "flex items-center justify-between pb-[40px] md:pb-[60px]"
+            : "w-fit pb-[40px] md:pb-[60px]"
         }
       >
         <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
@@ -50,7 +50,7 @@ const ServicesContent = (props: IProps) => {
               className={`service-card flex flex-col-reverse sm:flex-row gap-[12px] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
               <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] justify-between p-[12px] sm:p-[20px] md:p-[30px]">
-                <div className="space-y-[16px]">
+                <div className="space-y-[12px] md:space-y-[16px]">
                   <h2 className="font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
                     {elem.title}
                   </h2>
@@ -67,7 +67,7 @@ const ServicesContent = (props: IProps) => {
                   </Button>
                 </div>
               </div>
-              <figure className="overflow-hidden rounded-r-md">
+              <figure className="overflow-hidden rounded-t-md sm:rounded-r-md">
                 <img
                   loading="lazy"
                   src={elem.titleImg}

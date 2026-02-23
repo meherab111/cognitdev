@@ -5,7 +5,7 @@ import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUs";
 const WhyUsSection = () => {
   return (
     <section className="custom-container py-[50px] md:py-[100px]">
-      <div className="flex items-center justify-between pb-[30px] md:pb-[60px]">
+      <div className="flex items-center justify-between pb-[40px] md:pb-[60px]">
         <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           Why
           <span className="hidden sm:inline"> CognitDev</span>

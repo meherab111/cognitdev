@@ -15,6 +15,10 @@ const Header = () => {
   const navbarIconClass: string =
     "text-[38px] text-dark-gray absolute navbarIcon";
 
+  const translateXClass: string = openSidebar
+    ? "translate-x-0"
+    : "translate-x-full sm:translate-x-0";
+
   return (
     <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-100">
       <nav className="custom-container relative h-[100px] flex justify-between items-center">
@@ -47,16 +51,13 @@ const Header = () => {
 
         <div
           onClick={handleCloseSidebar}
-          className={`fixed inset-0 bg-dark-gray/20 backdrop-blur-xs w-full min-h-screen z-50 bg-overlay sm:hidden ${
-            openSidebar ? "opacity-100" : "opacity-0"
-          }`}
+          className={`fixed z-50 left-0 top-[100px] w-full min-h-screen 
+             bg-dark-gray/20 backdrop-blur-sm bg-overlay sm:hidden ${
+               translateXClass
+             }`}
         />
 
-        <ul
-          className={`mobile-navbar ${
-            openSidebar ? "translate-x-0" : "translate-x-full sm:translate-x-0"
-          }`}
-        >
+        <ul className={`mobile-navbar ${translateXClass}`}>
           {navInfo.map((elem: INavInfo, idx: number) => {
             return (
               <li key={idx}>

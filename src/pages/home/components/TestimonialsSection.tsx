@@ -26,13 +26,13 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="custom-container py-[100px]">
-      <div className="pb-[60px] flex justify-between items-center">
-        <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
+    <section className="custom-container py-[50px] md:py-[100px]">
+      <div className="pb-[40px] md:pb-[60px] flex justify-between items-center">
+        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           Testimonials
         </h1>
 
-        <div className="space-x-[40px]">
+        <div className="space-x-[20px] lg:space-x-[40px]">
           <button onClick={handleLeftClick}>
             <FaChevronLeft className={`left-[20px] ${chevronClass}`} />
           </button>
@@ -47,27 +47,27 @@ const TestimonialsSection = () => {
           return (
             <div
               key={idx}
-              className={`flex flex-col gap-[60px] items-center p-[60px] min-w-full testimonial-card`}
+              className={`flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[60px] items-center p-[30px] md:p-[40px] lg:p-[60px] min-w-full testimonial-card`}
               style={{ transform: `translateX(-${currentIdx * 100}%)` }}
             >
-              <BsFillChatSquareQuoteFill className="text-smoke-white text-[42px]" />
-              <h1 className="text-smoke-white font-quicksand font-semibold text-[32px] leading-[42px] text-center w-full max-w-[840px]">
+              <BsFillChatSquareQuoteFill className="text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
+              <h1 className="text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
                 {elem.comment}
               </h1>
 
-              <div className="flex gap-[20px] items-center">
+              <div className="flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
                 <figure>
                   <img
                     src={elem.userImg}
                     alt="User Image"
-                    className="h-[70px] w-[70px] rounded-full object-cover"
+                    className="h-[56px] md:h-[70px] w-[56px] md:w-[70px] rounded-full object-cover"
                   />
                 </figure>
-                <div>
-                  <h2 className="text-smoke-white font-quicksand text-[24px] font-semibold">
+                <div className="text-center md:text-left">
+                  <h2 className="text-smoke-white font-quicksand text-[20px] sm:text-[22px] lg:text-[24px] font-semibold">
                     {elem.userName}
                   </h2>
-                  <h3 className="text-light-gray font-quicksand text-[20px] font-semibold">
+                  <h3 className="text-light-gray font-quicksand text-[18px] lg:text-[20px] font-semibold">
                     {elem.userPosition}
                   </h3>
                 </div>

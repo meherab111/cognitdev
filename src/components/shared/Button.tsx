@@ -19,7 +19,7 @@ const Button = (props: IButton) => {
   return (
     <Link
       to={link}
-      className={`inline-flex items-center gap-[4px] md:gap-[6px] px-[12px] xs:px-[16px] md:px-[20px] py-[8px] xs:py-[10px] md:py-[12px] font-quicksand text-[16px] md:text-[18px] rounded-full font-medium ${btnClass}`}
+      className={`inline-flex items-center justify-center gap-[4px] md:gap-[6px] px-[12px] xs:px-[16px] md:px-[20px] py-[8px] xs:py-[10px] md:py-[12px] font-quicksand text-[16px] md:text-[18px] rounded-full font-medium ${btnClass}`}
     >
       {children} <MdArrowOutward />
     </Link>

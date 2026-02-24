@@ -12,10 +12,11 @@ const HeroContent = (props: IProps) => {
 
   return (
     <section
-      className={`w-full max-w-[600px] mx-auto pt-[200px] pb-[50px] ${flexClass ? "flex flex-col gap-[60px] items-center" : ""}`}
+      className={`w-full max-w-[600px] mx-auto pt-[140px] md:pt-[200px] pb-[26px] md:pb-[50px] px-[20px] md:px-0 ${flexClass ? "flex flex-col gap-[30px] md:gap-[60px] items-center" : ""}`}
     >
-      {children}
-
+      <h1 className="font-quicksand tracking-tight text-medium-gray font-medium text-[36px] md:text-[42px] lg:text-[52px] text-center leading-[46px] md:leading-[52px] lg:leading-[66px]">
+        {children}
+      </h1>
       {btnText && (
         <div className="none">
           <Button link={"/contact"} btnTheme={"dark"}>

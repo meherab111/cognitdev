@@ -26,7 +26,7 @@ const ContactFormSection = () => {
   };
 
   const formClass: string =
-    "w-full bg-light-gray/30 p-[16px] text-dark-gray text-[20px] md:text-[22px] font-quicksand font-medium focus:outline-none rounded-md placeholder:text-light-gray placeholder:font-quicksand";
+    "w-full bg-light-gray/30 p-[14px] md:p-[16px] text-dark-gray text-[20px] md:text-[22px] font-quicksand font-medium focus:outline-none rounded-md placeholder:text-light-gray placeholder:font-quicksand";
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -60,7 +60,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="custom-container py-[100px] flex justify-evenly">
+    <section className="custom-container py-[50px] md:py-[100px] flex flex-col xl:flex-row justify-evenly gap-[16px] md:gap-[20px] xl:gap-0">
       <figure>
         <iframe
           title="CognitDev Location"
@@ -71,12 +71,15 @@ const ContactFormSection = () => {
           allowFullScreen
           loading="eager"
           referrerPolicy="no-referrer-when-downgrade"
-          className="rounded-md w-[600px] h-full"
+          className="rounded-md w-full xl:w-[600px] h-[400px] xl:h-full"
         />
       </figure>
 
-      <form className="flex flex-col gap-[20px]" onSubmit={onSubmit}>
-        <div className="flex gap-[20px]">
+      <form
+        className="flex flex-col gap-[16px] md:gap-[20px]"
+        onSubmit={onSubmit}
+      >
+        <div className="flex flex-col md:flex-row gap-[16px] md:gap-[20px]">
           <input
             type="text"
             name="name"
@@ -105,7 +108,7 @@ const ContactFormSection = () => {
         <button
           type="submit"
           disabled={submitMsg}
-          className="rounded-md p-[12px] font-quicksand text-[20px] md:text-[22px] text-smoke-white bg-dark-gray font-medium cursor-pointer active:scale-98 hover:bg-medium-gray"
+          className="rounded-md p-[10px] md:p-[12px] font-quicksand text-[20px] md:text-[22px] text-smoke-white bg-dark-gray font-medium cursor-pointer active:scale-98 hover:bg-medium-gray"
         >
           {submitMsg ? "Submitting..." : "Submit"}
         </button>

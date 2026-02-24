@@ -26,22 +26,28 @@ const ServiceDetailsSection = () => {
     return <ErrorSection />;
   }
 
+  const gridSectionClass: string =
+    "grid grid-cols-1 xl:grid-cols-2 w-fit mx-auto py-[30px] xl:py-[40px] gap-[20px] md:gap-[30px] xl:gap-[40px]";
+
+  const headingClass: string =
+    "font-quicksand text-[26px] xl:text-[32px] font-semibold text-dark-gray leading-[36px] xl:leading-[42px]";
+
   return (
-    <section className="custom-container pt-[200px] pb-[100px] space-y-[60px]">
+    <section className="custom-container pt-[140px] md:pt-[200px] pb-[50px] md:pb-[100px] space-y-[30px] md:space-y-[40px] xl:space-y-[60px]">
       <div className="w-full max-w-[600px] mx-auto">
-        <h1 className="font-quicksand tracking-tight text-dark-gray font-medium text-[52px] text-center leading-[66px]">
+        <h1 className="font-quicksand tracking-tight text-dark-gray font-medium text-[42px] md:text-[48px] xl:text-[52px] text-center leading-[52px] xl:leading-[66px] underline underline-offset-[14px]">
           {findServiceDetailsInfo.title}
         </h1>
       </div>
 
-      <div className="grid grid-cols-2 w-fit mx-auto py-[40px] gap-[40px]">
+      <div className={gridSectionClass}>
         {findServiceDetailsInfo.choices.map((choice: string, idx: number) => {
           return (
-            <div key={idx} className="flex items-center gap-[10px]">
-              <IoMdCheckmarkCircleOutline className="text-[32px]" />
-              <h2 className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">
-                {choice}
-              </h2>
+            <div key={idx} className="flex gap-[10px]">
+              <div className="pt-[6px]">
+                <IoMdCheckmarkCircleOutline className="text-[26px] xl:text-[32px]" />
+              </div>
+              <h2 className={headingClass}>{choice}</h2>
             </div>
           );
         })}
@@ -49,19 +55,15 @@ const ServiceDetailsSection = () => {
 
       <ServiceDetailsImage imgSrc={findServiceDetailsInfo.srcImg[0]} />
 
-      <div className="grid grid-cols-2 w-fit mx-auto py-[40px] gap-[40px]">
+      <div className={gridSectionClass}>
         {findServiceDetailsInfo.offers.map((offer: IOffers, idx: number) => {
           return (
-            <div key={idx} className="flex gap-[20px]">
-              <p className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">
-                {offer.number}
-              </p>
+            <div key={idx} className="flex gap-[16px] xl:gap-[20px]">
+              <p className={headingClass}>{offer.number}</p>
 
               <div className="space-y-[10px]">
-                <h2 className="font-quicksand text-[32px] font-semibold text-dark-gray leading-[42px]">
-                  {offer.heading}
-                </h2>
-                <h3 className="font-quicksand font-medium text-[20px] text-medium-gray">
+                <h2 className={headingClass}>{offer.heading}</h2>
+                <h3 className="font-quicksand font-medium text-[18px] md:text-[20px] text-medium-gray">
                   {offer.description}
                 </h3>
               </div>

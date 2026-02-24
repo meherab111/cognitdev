@@ -10,11 +10,11 @@ const HeroSection = () => {
           width="700"
           height="550"
           loading="eager"
-          className="h-[300px] lg:h-auto w-[400px] lg:w-[650px] xl:w-[700px] object-cover rounded-md"
+          className="h-[300px] lg:h-auto w-[600px] lg:w-[650px] xl:w-[700px] object-cover rounded-md"
         />
       </figure>
       <div className="flex flex-col items-start gap-[20px] md:gap-[30px] lg:gap-[60px]">
-        <div className="space-y-[20px] md:space-y-[30px] text-left">
+        <div className="space-y-[20px] md:space-y-[30px]">
           <h1 className="font-quicksand tracking-tight text-dark-gray font-semibold text-[38px] md:text-[60px] xl:text-[90px] leading-none">
             CognitDev
           </h1>

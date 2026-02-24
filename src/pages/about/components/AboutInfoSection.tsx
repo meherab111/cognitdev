@@ -4,19 +4,19 @@ import type { IServicesInfo } from "../../../types/services/typesServices";
 
 const AboutInfoSection = () => {
   return (
-    <section className="custom-container py-[100px] relative flex justify-between">
-      <div className="sticky top-[100px] h-fit">
-        <h1 className="font-mohave text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
+    <section className="custom-container py-[50px] md:py-[100px] relative flex flex-col xl:flex-row justify-between">
+      <div className="block xl:sticky top-0 xl:top-[100px] h-fit w-fit pb-[30px] xl:pb-0">
+        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
           About CognitDev
         </h1>
       </div>
 
-      <div className="w-full max-w-[700px] space-y-[40px]">
-        <h2 className="text-dark-gray font-quicksand text-[32px] font-semibold">
+      <div className="w-full max-w-[700px] space-y-[20px] md:space-y-[30px] lg:space-y-[40px]">
+        <h2 className="text-dark-gray font-quicksand text-[28px] lg:text-[32px] font-semibold">
           We're a forward thinking software development company focused on
           building reliable, scalable, and intelligent digital solutions.
         </h2>
-        <h3 className="text-medium-gray font-quicksand text-[22px] font-medium">
+        <h3 className="text-medium-gray font-quicksand text-[20px] lg:text-[22px] font-medium">
           At the core of CognitDev is collaboration. We don't see our clients as
           just stakeholders. We treat them as partners in the digital product
           journey. Your ideas, insights, and business knowledge play a vital
@@ -32,12 +32,12 @@ const AboutInfoSection = () => {
         <div className="space-y-[10px]">
           {servicesInfo.map((elem: IServicesInfo) => {
             return (
-              <div className="flex items-center gap-[10px]">
-                <IoMdCheckmarkCircleOutline className="text-[22px]" />
-                <p
-                  key={elem.serviceId}
-                  className="text-medium-gray font-quicksand text-[22px] font-semibold"
-                >
+              <div
+                key={elem.serviceId}
+                className="flex items-center gap-[10px]"
+              >
+                <IoMdCheckmarkCircleOutline className="text-[20px] lg:text-[22px]" />
+                <p className="text-medium-gray font-quicksand text-[20px] lg:text-[22px] font-semibold">
                   {elem.title}
                 </p>
               </div>

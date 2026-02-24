@@ -47,9 +47,9 @@ const ServicesContent = (props: IProps) => {
           return (
             <div
               key={elem.serviceId}
-              className={`service-card flex flex-col-reverse sm:flex-row gap-[12px] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
+              className={`service-card flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
-              <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] justify-between p-[12px] sm:p-[20px] md:p-[30px]">
+              <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
                 <div className="space-y-[12px] md:space-y-[16px]">
                   <h2 className="font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
                     {elem.title}
@@ -67,14 +67,14 @@ const ServicesContent = (props: IProps) => {
                   </Button>
                 </div>
               </div>
-              <figure className="overflow-hidden rounded-t-md sm:rounded-r-md">
+              <figure className="overflow-hidden rounded-t-md md:rounded-tl-none md:rounded-r-md">
                 <img
                   loading="lazy"
                   src={elem.titleImg}
                   alt={`${elem.title} Image`}
                   width="450"
                   height="450"
-                  className="service-img h-full w-[800px] object-cover hover:scale-110"
+                  className="service-img h-[400px] md:h-full w-[800px] object-cover hover:scale-110"
                 />
               </figure>
             </div>

@@ -13,7 +13,7 @@ const ServiceDetailsImage = (props: IProps) => {
         width="1300"
         height="600"
         loading="lazy"
-        className="h-[600px] w-full object-cover rounded-md"
+        className="h-[400px] md:h-[500px] xl:h-[600px] w-full object-cover rounded-md"
       />
     </figure>
   );

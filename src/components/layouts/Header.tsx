@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   const navbarIconClass: string =
-    "text-[38px] text-dark-gray absolute navbarIcon";
+    "text-[32px] text-dark-gray absolute navbarIcon";
 
   const translateXClass: string = openSidebar
     ? "translate-x-0"
@@ -21,14 +21,14 @@ const Header = () => {
 
   return (
     <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-100">
-      <nav className="custom-container relative h-[100px] flex justify-between items-center">
+      <nav className="custom-container relative h-[80px] md:h-[100px] flex justify-between items-center">
         <Link to={"/"} onClick={handleCloseSidebar} aria-label="CognitDev Home">
           <img
             src="/images/logo/cognitdev-logo.webp"
             alt="CognitDev Logo"
             width="60"
             height="60"
-            className="h-auto w-[50px] md:w-[54px] object-contain"
+            className="h-auto w-[40px] md:w-[54px] object-contain"
           />
         </Link>
         <button
@@ -51,7 +51,7 @@ const Header = () => {
 
         <div
           onClick={handleCloseSidebar}
-          className={`fixed z-50 left-0 top-[100px] w-full min-h-screen 
+          className={`fixed z-50 left-0 top-[80px] w-full min-h-screen 
              bg-dark-gray/20 backdrop-blur-sm bg-overlay sm:hidden ${
                translateXClass
              }`}

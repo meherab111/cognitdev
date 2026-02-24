@@ -3,7 +3,7 @@ import type { IInfinityScrollInfo } from "../../../types/home/infinity-scroll-se
 
 const InfinityScrollSection = () => {
   return (
-    <section className="overflow-hidden py-[100px]">
+    <section className="overflow-hidden py-[50px] md:py-[100px]">
       {infinityScrollInfo.map((elem: IInfinityScrollInfo, idx: number) => {
         return (
           <div key={idx} className="flex whitespace-nowrap w-max">
@@ -17,7 +17,7 @@ const InfinityScrollSection = () => {
                     (services: string, servicesIdx: number) => (
                       <p
                         key={servicesIdx}
-                        className="flex items-center text-[110px] md:text-[120px] font-mohave font-medium uppercase pl-[24px] leading-none text-light-gray"
+                        className="flex items-center text-[90px] md:text-[110px] lg:text-[120px] font-mohave font-medium uppercase pl-[24px] leading-none text-light-gray"
                       >
                         <span
                           className={

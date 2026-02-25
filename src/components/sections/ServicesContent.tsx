@@ -1,6 +1,7 @@
 import servicesInfo from "../../apis/services/servicesInfo";
 import Button from "../../components/shared/Button";
 import type { IServicesInfo } from "../../types/services/typesServices";
+import SectionHeadingText from "./SectionHeadingText";
 
 interface IProps {
   slicedServicesLayout: boolean;
@@ -26,9 +27,7 @@ const ServicesContent = (props: IProps) => {
             : "w-fit pb-[40px] md:pb-[60px]"
         }
       >
-        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
-          Services
-        </h1>
+        <SectionHeadingText text={"Services"} />
 
         {btn && (
           <div>

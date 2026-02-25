@@ -5,10 +5,10 @@ import router from "./configs/routes";
 const App = () => {
   return (
     // <PreLoaderProvider>
-    <>
+    
       <RouterProvider router={router} />
-    </>
-    //  </PreLoaderProvider> 
+    
+    //  {/* </PreLoaderProvider>  */}
   );
 };
 

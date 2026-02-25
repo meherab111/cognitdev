@@ -3,6 +3,7 @@ import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import testimonialsInfo from "../../../apis/home/testimonials-section/testimonialsInfo";
 import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonials";
+import SectionHeadingText from "../../../components/sections/SectionHeadingText";
 
 const TestimonialsSection = () => {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
@@ -28,9 +29,7 @@ const TestimonialsSection = () => {
   return (
     <section className="custom-container py-[50px] md:py-[100px]">
       <div className="pb-[40px] md:pb-[60px] flex justify-between items-center">
-        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
-          Testimonials
-        </h1>
+        <SectionHeadingText text={"Testimonials"} />
 
         <div className="space-x-[20px] lg:space-x-[40px]">
           <button onClick={handleLeftClick}>

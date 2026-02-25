@@ -56,7 +56,7 @@ const PreLoader = (props: IProps) => {
         "<",
       );
 
-      tl.to(".preloader", {
+      tl.to(preloaderContainer.current, {
         yPercent: -100,
         duration: 2,
         ease: "power4.inOut",
@@ -69,7 +69,7 @@ const PreLoader = (props: IProps) => {
   return (
     <section
       ref={preloaderContainer}
-      className="preloader fixed inset-0 z-100 flex items-center justify-center gap-[16px] h-full w-full bg-smoke-white"
+      className="fixed inset-0 z-150 flex items-center justify-center gap-[16px] h-full w-full bg-smoke-white"
     >
       <figure className="preloader-logo">
         <img

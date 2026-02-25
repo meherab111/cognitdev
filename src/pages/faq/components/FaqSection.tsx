@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import faqInfo from "../../../apis/faq/faqInfo";
 import type { IFaqInfo } from "../../../types/faq/typesFaq";
+import SectionHeadingText from "../../../components/sections/SectionHeadingText";
 
 const FaqSection = () => {
   const [toggle, setToggle] = useState<null | number>(null);
@@ -15,10 +16,8 @@ const FaqSection = () => {
 
   return (
     <section className="custom-container py-[50px] md:py-[100px]">
-      <div className="w-fit pb-[30px] md:pb-[60px]">
-        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
-          FAQ
-        </h1>
+      <div className="w-fit pb-[40px] md:pb-[60px]">
+        <SectionHeadingText text={"FAQ"} />
       </div>
       <div className="flex flex-col gap-[20px] md:gap-[30px] lg:gap-[40px]">
         {faqInfo.map((elem: IFaqInfo, idx: number) => {

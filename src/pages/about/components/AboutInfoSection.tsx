@@ -1,14 +1,13 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import servicesInfo from "../../../apis/services/servicesInfo";
 import type { IServicesInfo } from "../../../types/services/typesServices";
+import SectionHeadingText from "../../../components/sections/SectionHeadingText";
 
 const AboutInfoSection = () => {
   return (
     <section className="custom-container py-[50px] md:py-[100px] relative flex flex-col xl:flex-row justify-between">
       <div className="block xl:sticky top-0 xl:top-[100px] h-fit w-fit pb-[30px] xl:pb-0">
-        <h1 className="font-mohave text-[30px] md:text-[36px] lg:text-[42px] font-semibold text-dark-gray border-b-2 border-b-dark-gray">
-          About CognitDev
-        </h1>
+        <SectionHeadingText text={"About CognitDev"} />
       </div>
 
       <div className="w-full max-w-[700px] space-y-[20px] md:space-y-[30px] lg:space-y-[40px]">

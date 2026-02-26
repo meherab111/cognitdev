@@ -1,20 +1,16 @@
 import { createContext, useEffect, useState, type ReactNode } from "react";
 import PreLoader from "../components/layouts/PreLoader";
-
-interface IPreLoaderContext {
-  isPreLoading: boolean;
-  setIsPreLoading: (state: boolean) => void;
-}
+import type { IPreLoaderContext } from "../types/context/typesPreLoader";
 
 interface IProps {
   children: ReactNode;
 }
 
-const PreLoaderContext = createContext<IPreLoaderContext | undefined>(
+export const PreLoaderContext = createContext<IPreLoaderContext | undefined>(
   undefined,
 );
 
-const PreLoaderProvider = (props: IProps) => {
+export const PreLoaderProvider = (props: IProps) => {
   const [isPreLoading, setIsPreLoading] = useState<boolean>(true);
 
   const { children } = props;
@@ -36,5 +32,3 @@ const PreLoaderProvider = (props: IProps) => {
     </PreLoaderContext.Provider>
   );
 };
-
-export default PreLoaderProvider;

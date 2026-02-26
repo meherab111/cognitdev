@@ -1,10 +1,46 @@
+import { useRef } from "react";
 import Button from "../../components/shared/Button";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const CtaSection = () => {
+  const ctaContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      const tl: gsap.core.Timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ctaContainerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        defaults: {
+          duration: 1,
+          opacity: 0,
+          ease: "power3.out",
+        },
+      });
+
+      tl.from(".cta-box", {
+        y: 90,
+      }).from(
+        ".cta-text",
+        {
+          y: 30,
+        },
+        "-=0.6",
+      );
+    },
+    { scope: ctaContainerRef },
+  );
+
   return (
-    <section className="py-[50px] md:py-[100px] px-[20px] md:px-0">
-      <div className="custom-container bg-dark-gray flex justify-center xl:justify-between items-center rounded-md !px-0">
-        <div className="flex flex-col items-center xl:items-start gap-[30px] xl:gap-[40px] w-full max-w-[700px] p-[30px] xl:pl-[60px] xl:pr-0 xl:py-0">
+    <section
+      ref={ctaContainerRef}
+      className="py-[50px] md:py-[100px] px-[20px] md:px-0"
+    >
+      <div className="cta-box custom-container bg-dark-gray flex justify-center xl:justify-between items-center rounded-md !px-0">
+        <div className="cta-text flex flex-col items-center xl:items-start gap-[30px] xl:gap-[40px] w-full max-w-[700px] p-[30px] xl:pl-[60px] xl:pr-0 xl:py-0">
           <h1 className="font-quicksand text-[28px] md:text-[32px] xl:text-[36px] font-semibold text-smoke-white leading-[36px] md:leading-[46px] text-center xl:text-left">
             Let's Build Software That Works for Your Business Growth
           </h1>

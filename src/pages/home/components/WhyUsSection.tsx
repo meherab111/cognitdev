@@ -1,11 +1,49 @@
+import { useGSAP } from "@gsap/react";
 import whyUsInfo from "../../../apis/home/why-us-section/whyUsInfo";
 import SectionHeadingText from "../../../components/sections/SectionHeadingText";
 import Button from "../../../components/shared/Button";
 import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUs";
+import { useRef } from "react";
+import gsap from "gsap";
 
 const WhyUsSection = () => {
+  const whyUsContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.from(".section-header", {
+        y: 90,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-header",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".why-card", {
+        y: 90,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".cards-container",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    },
+    { scope: whyUsContainerRef },
+  );
+
   return (
-    <section className="custom-container py-[50px] md:py-[100px]">
+    <section
+      ref={whyUsContainerRef}
+      className="custom-container py-[50px] md:py-[100px]"
+    >
       <div className="section-header flex items-center justify-between pb-[40px] md:pb-[60px]">
         <SectionHeadingText text={"Why"}>
           <span className="hidden sm:inline"> CognitDev</span>

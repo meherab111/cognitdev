@@ -13,9 +13,7 @@ const PreLoader = (props: IProps) => {
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        onComplete: animationDone,
-      });
+      const tl: gsap.core.Timeline = gsap.timeline();
 
       tl.fromTo(
         ".preloader-logo",
@@ -61,9 +59,11 @@ const PreLoader = (props: IProps) => {
         duration: 2,
         ease: "power4.inOut",
         delay: 0.3,
-      });
+      })
+
+      tl.call(animationDone, [], "-=0.3");
     },
-    { scope: preloaderContainer },
+    { scope: preloaderContainer, dependencies: [animationDone] },
   );
 
   return (

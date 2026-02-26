@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router";
 import router from "./configs/routes";
-import PreLoaderProvider from "./context/PreLoaderContext";
+import { PreLoaderProvider } from "./context/PreLoaderContext";
 
 const App = () => {
   return (

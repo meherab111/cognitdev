@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import testimonialsInfo from "../../../apis/home/testimonials-section/testimonialsInfo";
 import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonials";
 import SectionHeadingText from "../../../components/sections/SectionHeadingText";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const TestimonialsSection = () => {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
@@ -26,9 +28,42 @@ const TestimonialsSection = () => {
     });
   };
 
+  
+  const testimonialsContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.from(".section-header", {
+        y: 90,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-header",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".testimonials-box", {
+        x: 120,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".testimonials-box",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    },
+    { scope: testimonialsContainerRef },
+  );
+
   return (
-    <section className="custom-container py-[50px] md:py-[100px]">
-      <div className="pb-[40px] md:pb-[60px] flex justify-between items-center">
+    <section ref={testimonialsContainerRef} className="custom-container py-[50px] md:py-[100px]">
+      <div className="section-header pb-[40px] md:pb-[60px] flex justify-between items-center">
         <SectionHeadingText text={"Testimonials"} />
 
         <div className="space-x-[20px] lg:space-x-[40px]">
@@ -41,7 +76,7 @@ const TestimonialsSection = () => {
         </div>
       </div>
 
-      <div className="bg-dark-gray flex justify-start rounded-md overflow-x-hidden">
+      <div className="testimonials-box bg-dark-gray flex justify-start rounded-md overflow-x-hidden">
         {testimonialsInfo.map((elem: ITestimonialsInfo, idx: number) => {
           return (
             <div

@@ -1,9 +1,13 @@
 import { createContext, useEffect, useState, type ReactNode } from "react";
 import PreLoader from "../components/layouts/PreLoader";
-import type { IPreLoaderContext } from "../types/context/typesPreLoader";
 
 interface IProps {
   children: ReactNode;
+}
+
+interface IPreLoaderContext {
+  isPreLoading: boolean;
+  setIsPreLoading: (state: boolean) => void;
 }
 
 export const PreLoaderContext = createContext<IPreLoaderContext | undefined>(

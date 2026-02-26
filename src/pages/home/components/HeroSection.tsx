@@ -2,16 +2,12 @@ import { useGSAP } from "@gsap/react";
 import Button from "../../../components/shared/Button";
 import gsap from "gsap";
 import { useRef } from "react";
-import usePreLoader from "../../../hooks/usePreLoader";
 
 const HeroSection = () => {
-  const { isPreLoading } = usePreLoader();
   const homeContainerRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      if (isPreLoading) return;
-
       const tl: gsap.core.Timeline = gsap.timeline({
         defaults: { duration: 1 },
       });
@@ -31,7 +27,7 @@ const HeroSection = () => {
         "-=0.4",
       );
     },
-    { scope: homeContainerRef, dependencies: [isPreLoading] },
+    { scope: homeContainerRef },
   );
 
   return (

@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
       });
 
       gsap.from(".testimonials-box", {
-        x: 120,
+        y: 90,
         opacity: 0,
         stagger: 0.2,
         duration: 1,

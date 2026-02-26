@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import Button from "../../../components/shared/Button";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const HeroSection = () => {
   const homeContainerRef = useRef<HTMLDivElement | null>(null);
@@ -15,7 +15,7 @@ const HeroSection = () => {
       tl.from(".home-image", {
         x: -50,
         opacity: 0,
-        // delay: 3.6,
+        delay: 3.3,
         ease: "power1.out",
       }).from(
         ".home-heading, .btn",

@@ -34,10 +34,10 @@ const PreLoader = (props: IProps) => {
       tl.fromTo(
         ".preloader-logo",
         {
-          x: 200,
+          xPercent: 250,
         },
         {
-          x: 0,
+          xPercent: 0,
           duration: 1,
           ease: "power3.inOut",
         },
@@ -45,7 +45,7 @@ const PreLoader = (props: IProps) => {
         ".preloader-text",
         {
           opacity: 0,
-          x: 200,
+          x: 220,
         },
         {
           opacity: 1,
@@ -60,7 +60,7 @@ const PreLoader = (props: IProps) => {
         yPercent: -100,
         duration: 2,
         ease: "power4.inOut",
-        delay: 0.5,
+        delay: 0.3,
       });
     },
     { scope: preloaderContainer },
@@ -69,7 +69,7 @@ const PreLoader = (props: IProps) => {
   return (
     <section
       ref={preloaderContainer}
-      className="fixed inset-0 z-150 flex items-center justify-center gap-[16px] h-full w-full bg-smoke-white"
+      className="fixed inset-0 z-150 flex items-center justify-center gap-[10px] md:gap-[14px] lg:gap-[16px] h-full w-full bg-smoke-white"
     >
       <figure className="preloader-logo">
         <img
@@ -77,12 +77,12 @@ const PreLoader = (props: IProps) => {
           alt="CognitDev Logo"
           width="90"
           height="90"
-          className="h-auto w-[90px] object-contain"
+          className="h-auto w-[50px] md:w-[70px] lg:w-[90px] object-contain"
         />
       </figure>
 
       <div className="preloader-text">
-        <h1 className="font-quicksand tracking-tight text-dark-gray font-semibold text-[90px] leading-none">
+        <h1 className="font-quicksand tracking-tight text-dark-gray font-semibold text-[50px] md:text-[70px] lg:text-[90px] leading-none">
           CognitDev
         </h1>
       </div>

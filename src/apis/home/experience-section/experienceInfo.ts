@@ -1,4 +1,4 @@
-import type { IExperienceInfo } from "../../../types/home/experience-section/typesExperienceInfo";
+import type { IExperienceInfo } from "../../../types/home/experience-section/typesExperience";
 
 const experienceInfo: IExperienceInfo[] = [
   {

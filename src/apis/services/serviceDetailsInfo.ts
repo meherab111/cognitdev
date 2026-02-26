@@ -1,4 +1,4 @@
-import type { IServiceDetailsInfo } from "../../types/services/typesServiceDetailsInfo";
+import type { IServiceDetailsInfo } from "../../types/services/typesServiceDetails";
 
 const serviceDetailsInfo: IServiceDetailsInfo[] = [
   {

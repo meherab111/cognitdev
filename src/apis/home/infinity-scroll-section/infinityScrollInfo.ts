@@ -1,4 +1,4 @@
-import type { IInfinityScrollInfo } from "../../../types/home/infinity-scroll-section/typesInfinityScrollInfo";
+import type { IInfinityScrollInfo } from "../../../types/home/infinity-scroll-section/typesInfinityScroll";
 
 const infinityScrollInfo: IInfinityScrollInfo[] = [
   {

@@ -1,4 +1,4 @@
-import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonialsInfo";
+import type { ITestimonialsInfo } from "../../../types/home/testimonials-section/typesTestimonials";
 
 const testimonialsInfo: ITestimonialsInfo[] = [
   {

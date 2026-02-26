@@ -1,4 +1,4 @@
-import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUsInfo";
+import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUs";
 
 const whyUsInfo: IWhyUsInfo[] = [
   {

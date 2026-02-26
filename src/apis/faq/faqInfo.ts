@@ -1,4 +1,4 @@
-import type { IFaqInfo } from "../../types/faq/typesFaqInfo"
+import type { IFaqInfo } from "../../types/faq/typesFaq"
 
 
 const faqInfo: IFaqInfo[] = [

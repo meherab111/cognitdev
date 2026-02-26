@@ -1,4 +1,4 @@
-import type { IFollowInfo } from "../../types/footer/typesFollowInfo"
+import type { IFollowInfo } from "../../types/footer/typesFollow"
 
 
 const followInfo: IFollowInfo[] = [

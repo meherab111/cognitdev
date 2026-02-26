@@ -1,4 +1,4 @@
-import type { INavInfo } from "../../types/header/typesNavInfo";
+import type { INavInfo } from "../../types/header/typesNav";
 
 const navInfo: INavInfo[] = [
   {

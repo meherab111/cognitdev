@@ -2,16 +2,10 @@ import whyUsInfo from "../../../apis/home/why-us-section/whyUsInfo";
 import SectionHeadingText from "../../../components/sections/SectionHeadingText";
 import Button from "../../../components/shared/Button";
 import type { IWhyUsInfo } from "../../../types/home/why-us-section/typesWhyUs";
-import { useRef } from "react";
 
 const WhyUsSection = () => {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-
   return (
-    <section
-      ref={sectionRef}
-      className="custom-container py-[50px] md:py-[100px]"
-    >
+    <section className="custom-container py-[50px] md:py-[100px]">
       <div className="section-header flex items-center justify-between pb-[40px] md:pb-[60px]">
         <SectionHeadingText text={"Why"}>
           <span className="hidden sm:inline"> CognitDev</span>

@@ -15,7 +15,6 @@ const HeroSection = () => {
       tl.from(".home-image", {
         x: -50,
         opacity: 0,
-        delay: 3.3,
         ease: "power1.out",
       }).from(
         ".home-heading, .btn",

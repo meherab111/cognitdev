@@ -4,6 +4,8 @@ import HeroSection from "./components/HeroSection";
 const Contact = () => {
   return (
     <>
+      <title>CognitDev | Contact</title>
+
       <HeroSection />
       <ContactFormSection />
     </>

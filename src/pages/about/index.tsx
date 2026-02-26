@@ -6,6 +6,8 @@ import ImageSection from "./components/ImageSection";
 const About = () => {
   return (
     <>
+      <title>CognitDev | About</title>
+
       <HeroSection />
       <ImageSection />
       <AboutInfoSection />

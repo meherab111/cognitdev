@@ -33,53 +33,57 @@ const ServiceDetailsSection = () => {
     "font-quicksand text-[26px] xl:text-[32px] font-semibold text-dark-gray leading-[36px] xl:leading-[42px]";
 
   return (
-    <section className="custom-container pt-[140px] md:pt-[200px] pb-[50px] md:pb-[100px] space-y-[30px] md:space-y-[40px] xl:space-y-[60px]">
-      <div className="w-full max-w-[600px] mx-auto">
-        <h1 className="font-quicksand tracking-tight text-dark-gray font-medium text-[42px] md:text-[48px] xl:text-[52px] text-center leading-[52px] xl:leading-[66px] underline underline-offset-[14px]">
-          {findServiceDetailsInfo.title}
-        </h1>
-      </div>
+    <>
+      <title>{`CognitDev | Services | ${findServiceDetailsInfo.serviceId}`}</title>
 
-      <div className={gridSectionClass}>
-        {findServiceDetailsInfo.choices.map((choice: string, idx: number) => {
-          return (
-            <div key={idx} className="flex gap-[10px]">
-              <div className="pt-[6px]">
-                <IoMdCheckmarkCircleOutline className="text-[26px] xl:text-[32px]" />
+      <section className="custom-container pt-[140px] md:pt-[200px] pb-[50px] md:pb-[100px] space-y-[30px] md:space-y-[40px] xl:space-y-[60px]">
+        <div className="w-full max-w-[600px] mx-auto">
+          <h1 className="font-quicksand tracking-tight text-dark-gray font-medium text-[42px] md:text-[48px] xl:text-[52px] text-center leading-[52px] xl:leading-[66px] underline underline-offset-[14px]">
+            {findServiceDetailsInfo.title}
+          </h1>
+        </div>
+
+        <div className={gridSectionClass}>
+          {findServiceDetailsInfo.choices.map((choice: string, idx: number) => {
+            return (
+              <div key={idx} className="flex gap-[10px]">
+                <div className="pt-[6px]">
+                  <IoMdCheckmarkCircleOutline className="text-[26px] xl:text-[32px]" />
+                </div>
+                <h2 className={headingClass}>{choice}</h2>
               </div>
-              <h2 className={headingClass}>{choice}</h2>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      <ServiceDetailsImage imgSrc={findServiceDetailsInfo.srcImg[0]} />
+        <ServiceDetailsImage imgSrc={findServiceDetailsInfo.srcImg[0]} />
 
-      <div className={gridSectionClass}>
-        {findServiceDetailsInfo.offers.map((offer: IOffers, idx: number) => {
-          return (
-            <div key={idx} className="flex gap-[16px] xl:gap-[20px]">
-              <p className={headingClass}>{offer.number}</p>
+        <div className={gridSectionClass}>
+          {findServiceDetailsInfo.offers.map((offer: IOffers, idx: number) => {
+            return (
+              <div key={idx} className="flex gap-[16px] xl:gap-[20px]">
+                <p className={headingClass}>{offer.number}</p>
 
-              <div className="space-y-[10px]">
-                <h2 className={headingClass}>{offer.heading}</h2>
-                <h3 className="font-quicksand font-medium text-[18px] md:text-[20px] text-medium-gray">
-                  {offer.description}
-                </h3>
+                <div className="space-y-[10px]">
+                  <h2 className={headingClass}>{offer.heading}</h2>
+                  <h3 className="font-quicksand font-medium text-[18px] md:text-[20px] text-medium-gray">
+                    {offer.description}
+                  </h3>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      <ServiceDetailsImage imgSrc={findServiceDetailsInfo.srcImg[1]} />
+        <ServiceDetailsImage imgSrc={findServiceDetailsInfo.srcImg[1]} />
 
-      <div className="flex justify-center">
-        <Button link={"/services"} btnTheme={"dark"}>
-          View All Services
-        </Button>
-      </div>
-    </section>
+        <div className="flex justify-center">
+          <Button link={"/services"} btnTheme={"dark"}>
+            View All Services
+          </Button>
+        </div>
+      </section>
+    </>
   );
 };
 

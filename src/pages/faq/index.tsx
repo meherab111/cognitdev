@@ -1,15 +1,17 @@
-import CtaSection from "../../components/sections/CtaSection"
-import FaqSection from "./components/FaqSection"
-import HeroSection from "./components/HeroSection"
+import CtaSection from "../../components/sections/CtaSection";
+import FaqSection from "./components/FaqSection";
+import HeroSection from "./components/HeroSection";
 
 const Faq = () => {
   return (
     <>
-     <HeroSection /> 
-     <FaqSection />
-     <CtaSection />
-    </>
-  )
-}
+      <title>CognitDev | FAQ</title>
 
-export default Faq
+      <HeroSection />
+      <FaqSection />
+      <CtaSection />
+    </>
+  );
+};
+
+export default Faq;

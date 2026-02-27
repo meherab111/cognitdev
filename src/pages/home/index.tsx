@@ -9,8 +9,6 @@ import WhyUsSection from "./components/WhyUsSection";
 const Home = () => {
   return (
     <>
-      <title>CognitDev | Home</title>
-
       <HeroSection />
       <WhyUsSection />
       <ExperienceSection />

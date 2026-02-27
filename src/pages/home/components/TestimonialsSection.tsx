@@ -28,41 +28,43 @@ const TestimonialsSection = () => {
     });
   };
 
-  
   const testimonialsContainerRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      gsap.from(".section-header", {
-        y: 90,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
+      const tl: gsap.core.Timeline = gsap.timeline({
+        defaults: {
+          opacity: 0,
+          duration: 0.8,
+        },
         scrollTrigger: {
-          trigger: ".section-header",
+          trigger: testimonialsContainerRef.current,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none reset",
         },
       });
 
-      gsap.from(".testimonials-box", {
-        y: 90,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".testimonials-box",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
+      tl.from(".section-header", {
+        y: 70,
+        ease: "power2.out",
+      }).from(
+        ".testimonial-text",
+        {
+          y: 30,
+          stagger: 0.15,
+          ease: "power3.out",
         },
-      });
+        "-=0.2",
+      );
     },
     { scope: testimonialsContainerRef },
   );
 
   return (
-    <section ref={testimonialsContainerRef} className="custom-container py-[50px] md:py-[100px]">
+    <section
+      ref={testimonialsContainerRef}
+      className="custom-container py-[50px] md:py-[100px]"
+    >
       <div className="section-header pb-[40px] md:pb-[60px] flex justify-between items-center">
         <SectionHeadingText text={"Testimonials"} />
 
@@ -84,12 +86,12 @@ const TestimonialsSection = () => {
               className={`flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[60px] items-center p-[30px] md:p-[40px] lg:p-[60px] min-w-full testimonial-card`}
               style={{ transform: `translateX(-${currentIdx * 100}%)` }}
             >
-              <BsFillChatSquareQuoteFill className="text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
-              <h1 className="text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
+              <BsFillChatSquareQuoteFill className="testimonial-text text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
+              <h1 className="testimonial-text text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
                 {elem.comment}
               </h1>
 
-              <div className="flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
+              <div className="testimonial-text flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
                 <figure>
                   <img
                     src={elem.userImg}

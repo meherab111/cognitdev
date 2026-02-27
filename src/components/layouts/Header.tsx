@@ -3,10 +3,14 @@ import navInfo from "../../apis/header/navInfo";
 import type { INavInfo } from "../../types/header/typesNav";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Header = () => {
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
+
+  const headerContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleCloseSidebar = () => {
     setOpenSidebar(false);
@@ -19,9 +23,30 @@ const Header = () => {
     ? "translate-x-0"
     : "translate-x-full sm:translate-x-0";
 
+  useGSAP(() => {
+    gsap.fromTo(
+      "li",
+      {
+        opacity: 0,
+        x: 30,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+        delay: 0.2,
+      },
+    );
+  });
+
   return (
-    <header className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-100">
-      <nav className="custom-container relative h-[80px] md:h-[100px] flex justify-between items-center">
+    <header
+      ref={headerContainerRef}
+      className="w-full bg-smoke-white fixed top-0 left-1/2 -translate-x-1/2 z-100"
+    >
+      <nav className="header-navbar custom-container relative h-[80px] md:h-[100px] flex justify-between items-center">
         <Link to={"/"} onClick={handleCloseSidebar} aria-label="CognitDev Home">
           <img
             src="/images/logo/cognitdev-logo.webp"

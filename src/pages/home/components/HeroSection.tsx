@@ -9,22 +9,20 @@ const HeroSection = () => {
   useGSAP(
     () => {
       const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: { duration: 1 },
+        defaults: { opacity: 0, duration: 0.8 },
       });
 
       tl.from(".home-image", {
         x: -50,
-        opacity: 0,
         ease: "power2.inOut",
       }).from(
         ".home-heading, .btn",
         {
           y: 30,
-          opacity: 0,
-          stagger: 0.2,
+          stagger: 0.15,
           ease: "power3.inOut",
         },
-        "-=0.4",
+        "-=0.3",
       );
     },
     { scope: homeContainerRef },

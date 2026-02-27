@@ -21,25 +21,37 @@ const ServicesContent = (props: IProps) => {
     () => {
       const tl: gsap.core.Timeline = gsap.timeline({
         defaults: {
-          y: 90,
           opacity: 0,
-          duration: 1,
-          ease: "power2.out",
+          duration: 0.8,
         },
         scrollTrigger: {
           trigger: servicesContainerRef.current,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
+          start: "top 80%",
+          toggleActions: "play none none reset",
         },
       });
 
-      tl.from(".section-header", {}).from(
-        ".services-grid",
-        {
-          stagger: 0.2,
-        },
-        "-=0.6",
-      );
+      tl.from(".section-header", {
+        y: 70,
+        ease: "power2.out",
+      })
+        .from(
+          ".services-grid",
+          {
+            y: 80,
+            ease: "power3.out",
+          },
+          "-=0.2",
+        )
+        .from(
+          ".services-text, .services-btn",
+          {
+            y: 30,
+            stagger: 0.15,
+            ease: "power3.out",
+          },
+          "-=0.3",
+        );
     },
     { scope: servicesContainerRef },
   );
@@ -83,10 +95,10 @@ const ServicesContent = (props: IProps) => {
           return (
             <div
               key={elem.serviceId}
-              className={`service-card flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
+              className={`flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
-              <div className="services-text flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
-                <div className="space-y-[12px] md:space-y-[16px]">
+              <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
+                <div className="services-text space-y-[12px] md:space-y-[16px]">
                   <h2 className="font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
                     {elem.title}
                   </h2>
@@ -94,7 +106,7 @@ const ServicesContent = (props: IProps) => {
                     {elem.subtitle}
                   </h3>
                 </div>
-                <div>
+                <div className="services-btn">
                   <Button
                     link={`/services/${elem.serviceId}`}
                     btnTheme={"dark"}

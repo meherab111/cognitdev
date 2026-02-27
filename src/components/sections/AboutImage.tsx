@@ -3,15 +3,16 @@ interface IProps {
   imgSize: "large" | "small";
   width: "800" | "500";
   height: "550" | "400";
+  imgClass: string
 }
 
 const AboutImage = (props: IProps) => {
-  const { imgSrc, imgSize, width, height } = props;
+  const { imgSrc, imgSize, width, height, imgClass } = props;
 
   imgSize === "large" ? "max-w-[800px]" : "max-w-[500px]";
 
   return (
-    <figure>
+    <figure className={imgClass}>
       <img
         src={imgSrc}
         alt="About Images"

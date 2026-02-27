@@ -10,17 +10,30 @@ const ExperienceSection = () => {
 
   useGSAP(
     () => {
-      gsap.from(".experience-box", {
-        y: 60,
-        opacity: 0,
-        duration: 1.3,
-        ease: "power3.out",
+      const tl: gsap.core.Timeline = gsap.timeline({
+        defaults: {
+          opacity: 0,
+          duration: 0.8,
+        },
         scrollTrigger: {
           trigger: experienceContainerRef.current,
-          start: "top 60%",
-          toggleActions: "play none none reverse",
+          start: "top 85%",
+          toggleActions: "play none none reset",
         },
       });
+
+      tl.from(".experience-box", {
+        y: 70,
+        ease: "power2.out",
+      }).from(
+        ".experience-text",
+        {
+          y: 30,
+          stagger: 0.15,
+          ease: "power3.out",
+        },
+        "-=0.2",
+      );
     },
     { scope: experienceContainerRef },
   );
@@ -34,10 +47,10 @@ const ExperienceSection = () => {
         {experienceInfo.map((elem: IExperienceInfo, idx: number) => (
           <React.Fragment key={idx}>
             <div className="experience-items space-y-[20px] cursor-pointer hover:-translate-y-2">
-              <h1 className="font-quicksand font-semibold text-center text-[58px] md:text-[72px] lg:text-[96px] text-smoke-white leading-none">
+              <h1 className="experience-text font-quicksand font-semibold text-center text-[58px] md:text-[72px] lg:text-[96px] text-smoke-white leading-none">
                 {elem.stat}
               </h1>
-              <h2 className="font-quicksand text-center font-medium text-[18px] md:text-[20px] text-light-gray">
+              <h2 className="experience-text font-quicksand text-center font-medium text-[18px] md:text-[20px] text-light-gray">
                 {elem.label}
               </h2>
             </div>

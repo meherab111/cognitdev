@@ -1,9 +1,41 @@
+import { useRef } from "react";
 import AboutImage from "../../../components/sections/AboutImage";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const ImageSection = () => {
+  const imageContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      const tl: gsap.core.Timeline = gsap.timeline({
+        defaults: { opacity: 0, duration: 0.8, ease: "power2.inOut" },
+        scrollTrigger: {
+          trigger: imageContainerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reset",
+        },
+      });
+
+      tl.from(".image-left", {
+        x: -50,
+      }).from(
+        ".image-right",
+        {
+          x: 50,
+        },
+        "<",
+      );
+    },
+    { scope: imageContainerRef },
+  );
   return (
-    <section className="custom-container py-[50px] md:py-[100px] flex gap-[20px] md:gap-[40px] flex-col md:flex-row items-center">
+    <section
+      ref={imageContainerRef}
+      className="custom-container py-[50px] md:py-[100px] flex gap-[20px] md:gap-[40px] flex-col md:flex-row items-center overflow-hidden"
+    >
       <AboutImage
+        imgClass={"image-left"}
         imgSrc={"/images/about/image-section/about-image-01.webp"}
         imgSize={"large"}
         width={"800"}
@@ -11,12 +43,13 @@ const ImageSection = () => {
       />
       <div className="space-y-[20px] md:space-y-[40px]">
         <AboutImage
+          imgClass={"image-right"}
           imgSrc={"/images/about/image-section/about-image-02.webp"}
           imgSize={"small"}
           width={"500"}
           height={"400"}
         />
-        <div className="bg-dark-gray h-fit w-full md:w-fit p-[42px] md:p-[50px] lg:p-[60px] space-y-[20px] rounded-md">
+        <div className="experience-box bg-dark-gray h-fit w-full md:w-fit p-[42px] md:p-[50px] lg:p-[60px] space-y-[20px] rounded-md">
           <h1 className="font-quicksand font-semibold text-center text-[62px] md:text-[76px] lg:text-[96px] text-smoke-white leading-none">
             7+
           </h1>

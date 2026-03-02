@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ImCross } from "react-icons/im";
 import faqInfo from "../../../apis/faq/faqInfo";
 import type { IFaqInfo } from "../../../types/faq/typesFaq";
 import SectionHeadingText from "../../../components/sections/SectionHeadingText";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const FaqSection = () => {
   const [toggle, setToggle] = useState<null | number>(null);
@@ -11,11 +13,45 @@ const FaqSection = () => {
     setToggle(toggle === index ? null : index);
   };
 
+  const faqContainerRef = useRef<HTMLDivElement | null>(null);
+
+    useGSAP(
+    () => {
+      const tl: gsap.core.Timeline = gsap.timeline({
+        defaults: {
+          opacity: 0,
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: faqContainerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+      });
+
+      tl.from(".section-header", {
+        y: 70,
+        ease: "power2.out",
+      }).from(
+          ".faq-box",
+          {
+            y: -30,
+            stagger: 0.15,
+            ease: "power3.out",
+          },
+          "-=0.3",
+        )
+    },
+    { scope: faqContainerRef },
+  );
+
+
+
   const questionClass: string =
     "font-quicksand text-[26px] lg:text-[32px] font-semibold text-dark-gray leading-[32px]";
 
   return (
-    <section className="custom-container py-[50px] md:py-[100px]">
+    <section ref={faqContainerRef} className="custom-container py-[50px] md:py-[100px]">
       <div className="w-fit pb-[40px] md:pb-[60px]">
         <SectionHeadingText text={"FAQ"} />
       </div>
@@ -25,7 +61,7 @@ const FaqSection = () => {
             <div
               key={elem.number}
               onClick={() => handleToggle(idx)}
-              className="flex gap-[30px] md:gap-[40px] lg:gap-[60px] justify-between border-b-1 border-b-light-gray/30 pb-[20px] md:pb-[40px] cursor-pointer"
+              className="faq-box flex gap-[30px] md:gap-[40px] lg:gap-[60px] justify-between border-b-1 border-b-light-gray/30 pb-[20px] md:pb-[40px] cursor-pointer"
             >
               <div className="flex gap-[16px] md:gap-[30px]">
                 <p className={questionClass}>{elem.number}</p>
@@ -33,7 +69,7 @@ const FaqSection = () => {
                 <div className="space-y-[14px] md:space-y-[20px]">
                   <h2 className={questionClass}>{elem.question}</h2>
                   {idx === toggle && (
-                    <h3 className="font-quicksand font-medium text-[20px] md:text-[22px] text-medium-gray">
+                    <h3 className="animate-faq-down font-quicksand font-medium text-[20px] md:text-[22px] text-medium-gray">
                       {elem.answer}
                     </h3>
                   )}

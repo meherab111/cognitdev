@@ -1,12 +1,13 @@
 interface IProps {
   imgSrc: string;
+  imgClass: string
 }
 
 const ServiceDetailsImage = (props: IProps) => {
-  const { imgSrc } = props;
+  const { imgSrc, imgClass } = props;
 
   return (
-    <figure>
+    <figure className={imgClass}>
       <img
         src={imgSrc}
         alt="service-section-image"

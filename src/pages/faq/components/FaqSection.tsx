@@ -15,7 +15,7 @@ const FaqSection = () => {
 
   const faqContainerRef = useRef<HTMLDivElement | null>(null);
 
-    useGSAP(
+  useGSAP(
     () => {
       const tl: gsap.core.Timeline = gsap.timeline({
         defaults: {
@@ -33,26 +33,27 @@ const FaqSection = () => {
         y: 70,
         ease: "power2.out",
       }).from(
-          ".faq-box",
-          {
-            y: -30,
-            stagger: 0.15,
-            ease: "power3.out",
-          },
-          "-=0.3",
-        )
+        ".faq-box",
+        {
+          y: -30,
+          stagger: 0.15,
+          ease: "power3.out",
+        },
+        "-=0.3",
+      );
     },
     { scope: faqContainerRef },
   );
-
-
 
   const questionClass: string =
     "font-quicksand text-[26px] lg:text-[32px] font-semibold text-dark-gray leading-[32px]";
 
   return (
-    <section ref={faqContainerRef} className="custom-container py-[50px] md:py-[100px]">
-      <div className="w-fit pb-[40px] md:pb-[60px]">
+    <section
+      ref={faqContainerRef}
+      className="custom-container py-[50px] md:py-[100px]"
+    >
+      <div className="section-header w-fit pb-[40px] md:pb-[60px]">
         <SectionHeadingText text={"FAQ"} />
       </div>
       <div className="flex flex-col gap-[20px] md:gap-[30px] lg:gap-[40px]">
@@ -61,18 +62,18 @@ const FaqSection = () => {
             <div
               key={elem.number}
               onClick={() => handleToggle(idx)}
-              className="faq-box flex gap-[30px] md:gap-[40px] lg:gap-[60px] justify-between border-b-1 border-b-light-gray/30 pb-[20px] md:pb-[40px] cursor-pointer"
+              className="faq-box flex gap-[30px] md:gap-[40px] lg:gap-[60px] justify-between border-b-1 border-b-light-gray/30 pb-[10px] md:pb-[20px] cursor-pointer"
             >
               <div className="flex gap-[16px] md:gap-[30px]">
                 <p className={questionClass}>{elem.number}</p>
 
                 <div className="space-y-[14px] md:space-y-[20px]">
                   <h2 className={questionClass}>{elem.question}</h2>
-                  {idx === toggle && (
-                    <h3 className="animate-faq-down font-quicksand font-medium text-[20px] md:text-[22px] text-medium-gray">
-                      {elem.answer}
-                    </h3>
-                  )}
+                  <h3
+                    className={`faq-answer font-quicksand font-medium text-[20px] md:text-[22px] text-medium-gray ${idx === toggle ? "max-h-[300px] opacity-100 pb-[10px]" : "max-h-0 opacity-0"}`}
+                  >
+                    {elem.answer}
+                  </h3>
                 </div>
               </div>
 

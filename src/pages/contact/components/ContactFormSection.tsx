@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useRef, useState } from "react";
 import Swal, { type SweetAlertIcon, type SweetAlertOptions } from "sweetalert2";
 
 interface IApiResponse {
@@ -59,9 +61,35 @@ const ContactFormSection = () => {
     }
   };
 
+  const contactContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      const tl: gsap.core.Timeline = gsap.timeline({
+        defaults: { opacity: 0, duration: 0.8, ease: "power2.inOut" },
+        scrollTrigger: {
+          trigger: contactContainerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reset",
+        },
+      });
+
+      tl.from(".left-content", {
+        x: -50,
+      }).from(
+        ".right-content",
+        {
+          x: 50,
+        },
+        "<",
+      );
+    },
+    { scope: contactContainerRef },
+  );
+
   return (
-    <section className="custom-container py-[50px] md:py-[100px] flex flex-col xl:flex-row justify-evenly gap-[16px] md:gap-[20px] xl:gap-0">
-      <figure>
+    <section ref={contactContainerRef} className="custom-container py-[50px] md:py-[100px] flex flex-col xl:flex-row justify-evenly gap-[16px] md:gap-[20px] xl:gap-0">
+      <figure className="left-content">
         <iframe
           title="CognitDev Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98239.9605093902!2d90.38030546314802!3d23.787843432641598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1770919725501!5m2!1sen!2sbd"
@@ -76,7 +104,7 @@ const ContactFormSection = () => {
       </figure>
 
       <form
-        className="flex flex-col gap-[16px] md:gap-[20px]"
+        className="right-content flex flex-col gap-[16px] md:gap-[20px]"
         onSubmit={onSubmit}
       >
         <div className="flex flex-col md:flex-row gap-[16px] md:gap-[20px]">

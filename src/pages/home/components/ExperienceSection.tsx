@@ -10,30 +10,34 @@ const ExperienceSection = () => {
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: {
-          opacity: 0,
-          duration: 0.8,
-        },
+      gsap.from(".experience-box", {
+        y: 70,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: experienceContainerRef.current,
+          trigger: ".experience-box",
           start: "top 85%",
-          toggleActions: "play none none reset",
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.from(".experience-box", {
-        y: 70,
-        ease: "power2.out",
-      }).from(
-        ".experience-text",
-        {
+      const items: HTMLElement[] =
+        gsap.utils.toArray<HTMLElement>(".experience-items");
+
+      items.forEach((item) => {
+        gsap.from(item, {
           y: 30,
-          stagger: 0.15,
+          opacity: 0,
+          duration: 1,
           ease: "power3.out",
-        },
-        "-=0.2",
-      );
+          scrollTrigger: {
+            trigger: item,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
     },
     { scope: experienceContainerRef },
   );

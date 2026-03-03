@@ -19,39 +19,46 @@ const ServicesContent = (props: IProps) => {
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: {
-          opacity: 0,
-          duration: 0.8,
-        },
+      gsap.from(".section-header", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: servicesContainerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reset",
+          trigger: ".section-header",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.from(".section-header", {
-        y: 70,
-        ease: "power2.out",
-      })
-        .from(
-          ".services-grid",
-          {
-            y: 80,
-            ease: "power3.out",
+      gsap.from(".services-grid", {
+        opacity: 0,
+        duration: 1,
+        y: 80,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".services-grid",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      const items: HTMLElement[] =
+        gsap.utils.toArray<HTMLElement>(".service-items");
+
+      items.forEach((item) => {
+        gsap.from(item, {
+          y: 80,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
           },
-          "-=0.2",
-        )
-        .from(
-          ".services-text, .services-btn",
-          {
-            y: 30,
-            stagger: 0.15,
-            ease: "power3.out",
-          },
-          "-=0.3",
-        );
+        });
+      });
     },
     { scope: servicesContainerRef },
   );
@@ -95,10 +102,10 @@ const ServicesContent = (props: IProps) => {
           return (
             <div
               key={elem.serviceId}
-              className={`flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
+              className={`service-items flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
               <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
-                <div className="services-text space-y-[12px] md:space-y-[16px]">
+                <div className="space-y-[12px] md:space-y-[16px]">
                   <h2 className="font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
                     {elem.title}
                   </h2>
@@ -106,7 +113,7 @@ const ServicesContent = (props: IProps) => {
                     {elem.subtitle}
                   </h3>
                 </div>
-                <div className="services-btn">
+                <div>
                   <Button
                     link={`/services/${elem.serviceId}`}
                     btnTheme={"dark"}
@@ -122,7 +129,7 @@ const ServicesContent = (props: IProps) => {
                   alt={`${elem.title} Image`}
                   width="450"
                   height="450"
-                  className="service-img h-[400px] md:h-full w-[800px] object-cover hover:scale-110"
+                  className="h-[400px] md:h-full w-[800px] object-cover hover:scale-110"
                 />
               </figure>
             </div>

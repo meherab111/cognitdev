@@ -12,9 +12,9 @@ const WhyUsSection = () => {
   useGSAP(
     () => {
       gsap.from(".section-header", {
-        y: 70,
+        y: 80,
         opacity: 0,
-        duration: 0.8,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".section-header",
@@ -27,13 +27,13 @@ const WhyUsSection = () => {
 
       cards.forEach((card) => {
         gsap.from(card, {
-          y: 70,
+          y: 80,
           opacity: 0,
-          duration: 0.8,
+          duration: 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 80%",
+            start: "top 75%",
             toggleActions: "play none none reverse",
           },
         });

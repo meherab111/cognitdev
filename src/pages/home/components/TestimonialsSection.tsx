@@ -32,30 +32,29 @@ const TestimonialsSection = () => {
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: {
-          opacity: 0,
-          duration: 0.8,
-        },
+      gsap.from(".section-header", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: testimonialsContainerRef.current,
+          trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reset",
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.from(".section-header", {
-        y: 70,
-        ease: "power2.out",
-      }).from(
-        ".testimonial-text",
-        {
-          y: 30,
-          stagger: 0.15,
-          ease: "power3.out",
+      gsap.from(".testimonials-box", {
+        opacity: 0,
+        duration: 1,
+        y: 80,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".testimonials-box",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
         },
-        "-=0.2",
-      );
+      });
     },
     { scope: testimonialsContainerRef },
   );
@@ -86,12 +85,12 @@ const TestimonialsSection = () => {
               className={`flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[60px] items-center p-[30px] md:p-[40px] lg:p-[60px] min-w-full testimonial-card`}
               style={{ transform: `translateX(-${currentIdx * 100}%)` }}
             >
-              <BsFillChatSquareQuoteFill className="testimonial-text text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
-              <h1 className="testimonial-text text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
+              <BsFillChatSquareQuoteFill className="text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
+              <h1 className="text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
                 {elem.comment}
               </h1>
 
-              <div className="testimonial-text flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
+              <div className="flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
                 <figure>
                   <img
                     src={elem.userImg}

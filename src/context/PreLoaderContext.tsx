@@ -2,14 +2,10 @@ import { createContext, useEffect, useState, type ReactNode } from "react";
 import PreLoader from "../components/layouts/PreLoader";
 import { useLenis } from "lenis/react";
 import type Lenis from "lenis";
+import type { IPreLoaderContext } from "../types/context/typesPreloader";
 
 interface IProps {
   children: ReactNode;
-}
-
-interface IPreLoaderContext {
-  isPreLoading: boolean;
-  setIsPreLoading: (state: boolean) => void;
 }
 
 export const PreLoaderContext = createContext<IPreLoaderContext | undefined>(
@@ -25,12 +21,12 @@ export const PreLoaderProvider = (props: IProps) => {
 
   useEffect(() => {
     if (isPreLoading) {
-    document.body.style.overflow = "hidden";
-    lenis?.stop();
-  } else {
-    document.body.style.overflow = "auto";
-    lenis?.start();
-  }
+      document.body.style.overflow = "hidden";
+      lenis?.stop();
+    } else {
+      document.body.style.overflow = "auto";
+      lenis?.start();
+    }
   }, [isPreLoading, lenis]);
 
   return (

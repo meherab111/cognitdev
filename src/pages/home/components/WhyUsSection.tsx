@@ -11,25 +11,33 @@ const WhyUsSection = () => {
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: {
-          y: 70,
-          opacity: 0,
-          duration: 0.8,
-        },
+      gsap.from(".section-header", {
+        y: 70,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: whyUsContainerRef.current,
+          trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reset"
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.from(".section-header", {
-        ease: "power2.out",
-      }).from(".why-card", {
-        stagger: 0.15,
-        ease: "power3.out",
-      }, "-=0.2");
+      const cards: HTMLElement[] = gsap.utils.toArray<HTMLElement>(".why-card");
+
+      cards.forEach((card) => {
+        gsap.from(card, {
+          y: 70,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
     },
     { scope: whyUsContainerRef },
   );

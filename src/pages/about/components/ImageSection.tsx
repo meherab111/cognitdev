@@ -9,7 +9,7 @@ const ImageSection = () => {
   useGSAP(
     () => {
       const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: { opacity: 0, duration: 0.8, ease: "power2.inOut" },
+        defaults: { opacity: 0, duration: 1, ease: "power2.inOut" },
         scrollTrigger: {
           trigger: imageContainerRef.current,
           start: "top 85%",
@@ -26,6 +26,18 @@ const ImageSection = () => {
         },
         "<",
       );
+
+      gsap.from(".experience-box", {
+        duration: 1,
+        opacity: 0,
+        y: 80,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".experience-box",
+          start: "top 82%",
+          toggleActions: "play none none reverse",
+        },
+      });
     },
     { scope: imageContainerRef },
   );

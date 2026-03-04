@@ -22,21 +22,17 @@ const ExperienceSection = () => {
         },
       });
 
-      const items: HTMLElement[] =
-        gsap.utils.toArray<HTMLElement>(".experience-items");
-
-      items.forEach((item) => {
-        gsap.from(item, {
-          y: 30,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 82%",
-            toggleActions: "play none none reverse",
-          },
-        });
+      gsap.from(".experience-text", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".experience-items",
+          start: "top 82%",
+          toggleActions: "play none none reverse",
+        },
       });
     },
     { scope: experienceContainerRef },

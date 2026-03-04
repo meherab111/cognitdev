@@ -31,20 +31,20 @@ const ServicesContent = (props: IProps) => {
         },
       });
 
-      gsap.from(".services-grid", {
-        opacity: 0,
-        duration: 1,
-        y: 80,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".services-grid",
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-        },
-      });
+      // gsap.from(".services-grid", {
+      //   opacity: 0,
+      //   duration: 1,
+      //   y: 80,
+      //   ease: "power3.out",
+      //   scrollTrigger: {
+      //     trigger: ".services-grid",
+      //     start: "top 75%",
+      //     toggleActions: "play none none reverse",
+      //   },
+      // });
 
       const items: HTMLElement[] =
-        gsap.utils.toArray<HTMLElement>(".service-items");
+        gsap.utils.toArray<HTMLElement>(".services-grid");
 
       items.forEach((item) => {
         gsap.from(item, {
@@ -72,6 +72,29 @@ const ServicesContent = (props: IProps) => {
           toggleActions: "play none none reverse",
         },
       });
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(max-width: 767px)", () => {
+        const infos = gsap.utils.toArray<HTMLElement>(".service-infos");
+
+        infos.forEach((info) => {
+          gsap.from(info, {
+            duration: 1,
+            opacity: 0,
+            y: 30,
+            stagger: 0.15,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: info,
+              start: "top 72%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        });
+      });
+
+      return () => mm.revert();
     },
     { scope: servicesContainerRef },
   );
@@ -115,7 +138,7 @@ const ServicesContent = (props: IProps) => {
           return (
             <div
               key={elem.serviceId}
-              className={`service-items flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
+              className={`flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
               <div className="service-infos flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
                 <div className="space-y-[12px] md:space-y-[16px]">
@@ -142,7 +165,7 @@ const ServicesContent = (props: IProps) => {
                   alt={`${elem.title} Image`}
                   width="450"
                   height="450"
-                  className="h-[400px] md:h-full w-[800px] object-cover hover:scale-110"
+                  className="service-img h-[400px] md:h-full w-[800px] object-cover hover:scale-110"
                 />
               </figure>
             </div>

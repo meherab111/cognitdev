@@ -7,47 +7,82 @@ import { useRef } from "react";
 import gsap from "gsap";
 
 const AboutInfoSection = () => {
-
-
-    const aboutInfoContainerRef = useRef<HTMLDivElement | null>(null);
+  const aboutInfoContainerRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: {
-          opacity: 0,
-          duration: 0.8,
-        },
+      gsap.from(".section-header", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutInfoContainerRef.current,
+          trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reset",
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.from(".section-header", {
-        y: 70,
-        ease: "power2.out",
-      }).from(
-        ".about-text",
-        {
-          y: 30,
-          stagger: 0.15,
+      const cards: HTMLElement[] = gsap.utils.toArray<HTMLElement>(".why-card");
+
+      cards.forEach((card) => {
+        gsap.from(card, {
+          y: 80,
+          opacity: 0,
+          duration: 1,
           ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+
+      gsap.from(".about-text", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.25,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-info",
+          start: "top 72%",
+          toggleActions: "play none none reverse",
         },
-        "-=0.2",
-      );
+      });
+
+      const infos: HTMLElement[] =
+        gsap.utils.toArray<HTMLElement>(".about-infos");
+
+      infos.forEach((info) => {
+        gsap.from(info, {
+          y: 80,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.25,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: info,
+            start: "top 72%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
     },
     { scope: aboutInfoContainerRef },
   );
 
   return (
-    <section ref={aboutInfoContainerRef} className="custom-container py-[50px] md:py-[100px] relative flex flex-col xl:flex-row justify-between">
+    <section
+      ref={aboutInfoContainerRef}
+      className="custom-container py-[50px] md:py-[100px] relative flex flex-col xl:flex-row justify-between"
+    >
       <div className="section-header block xl:sticky top-0 xl:top-[100px] h-fit w-fit pb-[30px] xl:pb-0">
         <SectionHeadingText text={"About CognitDev"} />
       </div>
 
-      <div className="w-full max-w-[700px] space-y-[20px] md:space-y-[30px] lg:space-y-[40px]">
+      <div className="about-info w-full max-w-[700px] space-y-[20px] md:space-y-[30px] lg:space-y-[40px]">
         <h2 className="about-text text-dark-gray font-quicksand text-[28px] lg:text-[32px] font-semibold">
           We're a forward thinking software development company focused on
           building reliable, scalable, and intelligent digital solutions.
@@ -65,7 +100,7 @@ const AboutInfoSection = () => {
           clean architecture and thoughtful engineering.
         </h3>
 
-        <div className="space-y-[10px]">
+        <div className="about-infos space-y-[10px]">
           {servicesInfo.map((elem: IServicesInfo) => {
             return (
               <div

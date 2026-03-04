@@ -38,6 +38,20 @@ const WhyUsSection = () => {
           },
         });
       });
+
+      gsap.from(".why-text", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".why-card",
+          start: "top 72%",
+          toggleActions: "play none none reverse",
+        },
+      });
+      
     },
     { scope: whyUsContainerRef },
   );
@@ -66,13 +80,13 @@ const WhyUsSection = () => {
               key={elem.number}
               className="why-card space-y-[12px] md:space-y-[20px] lg:space-y-[30px]"
             >
-              <h1 className="text-dark-gray font-quicksand font-semibold text-[72px] md:text-[100px] lg:text-[130px] leading-none tracking-0 lg:tracking-[-6px]">
+              <h1 className="why-text text-dark-gray font-quicksand font-semibold text-[72px] md:text-[100px] lg:text-[130px] leading-none tracking-0 lg:tracking-[-6px]">
                 {elem.number}
               </h1>
-              <h2 className="text-dark-gray font-quicksand text-[28px] md:text-[36px] lg:text-[42px] font-semibold">
+              <h2 className="why-text text-dark-gray font-quicksand text-[28px] md:text-[36px] lg:text-[42px] font-semibold">
                 {elem.title}
               </h2>
-              <p className="text-medium-gray font-quicksand text-[18px] md:text-[20px] font-medium">
+              <p className="why-text text-medium-gray font-quicksand text-[18px] md:text-[20px] font-medium">
                 {elem.description}
               </p>
             </div>

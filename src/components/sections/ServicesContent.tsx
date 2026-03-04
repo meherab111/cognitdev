@@ -59,6 +59,19 @@ const ServicesContent = (props: IProps) => {
           },
         });
       });
+
+      gsap.from(".service-btn, .service-text", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".service-infos",
+          start: "top 72%",
+          toggleActions: "play none none reverse",
+        },
+      });
     },
     { scope: servicesContainerRef },
   );
@@ -104,16 +117,16 @@ const ServicesContent = (props: IProps) => {
               key={elem.serviceId}
               className={`service-items flex flex-col-reverse md:flex-row gap-[0] md:gap-[20px] shadow-sm rounded-md hover:shadow-lg ${colSpan ? colSpanClass : ""}`}
             >
-              <div className="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
+              <div className="service-infos flex flex-col gap-[20px] sm:gap-[30px] md:gap-[60px] bg-smoke-white justify-between p-[16px] sm:p-[20px] md:p-[30px]">
                 <div className="space-y-[12px] md:space-y-[16px]">
-                  <h2 className="font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
+                  <h2 className="service-text font-quicksand text-[26px] md:text-[32px] font-semibold text-dark-gray leading-[30px] md:leading-[42px]">
                     {elem.title}
                   </h2>
-                  <h3 className="font-quicksand font-medium text-[18px] md:text-[20px] text-medium-gray">
+                  <h3 className="service-text font-quicksand font-medium text-[18px] md:text-[20px] text-medium-gray">
                     {elem.subtitle}
                   </h3>
                 </div>
-                <div>
+                <div className="service-btn">
                   <Button
                     link={`/services/${elem.serviceId}`}
                     btnTheme={"dark"}

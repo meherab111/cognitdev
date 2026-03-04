@@ -55,6 +55,19 @@ const TestimonialsSection = () => {
           toggleActions: "play none none reverse",
         },
       });
+
+      gsap.from(".testimonials-info", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".testimonials-info",
+          start: "top 72%",
+          toggleActions: "play none none reverse",
+        },
+      });
     },
     { scope: testimonialsContainerRef },
   );
@@ -85,12 +98,12 @@ const TestimonialsSection = () => {
               className={`flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[60px] items-center p-[30px] md:p-[40px] lg:p-[60px] min-w-full testimonial-card`}
               style={{ transform: `translateX(-${currentIdx * 100}%)` }}
             >
-              <BsFillChatSquareQuoteFill className="text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
-              <h1 className="text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
+              <BsFillChatSquareQuoteFill className="testimonials-info text-smoke-white text-[30px] md:text-[36px] lg:text-[42px]" />
+              <h1 className="testimonials-info text-smoke-white font-quicksand font-semibold text-[24px] sm:text-[26px] lg:text-[32px] leading-[36px] md:leading-[42px] text-center w-full max-w-[840px]">
                 {elem.comment}
               </h1>
 
-              <div className="flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
+              <div className="testimonials-info flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center">
                 <figure>
                   <img
                     src={elem.userImg}

@@ -39,7 +39,7 @@ const FaqSection = () => {
           stagger: 0.15,
           ease: "power3.out",
         },
-        "-=0.3",
+        "-=0.4",
       );
     },
     { scope: faqContainerRef },

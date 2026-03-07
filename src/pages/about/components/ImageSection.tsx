@@ -13,7 +13,7 @@ const ImageSection = () => {
         scrollTrigger: {
           trigger: imageContainerRef.current,
           start: "top 85%",
-          toggleActions: "play none none reset",
+          toggleActions: "play none none reverse",
         },
       });
 

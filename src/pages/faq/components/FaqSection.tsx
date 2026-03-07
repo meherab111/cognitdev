@@ -17,30 +17,32 @@ const FaqSection = () => {
 
   useGSAP(
     () => {
-      const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: {
-          opacity: 0,
-          duration: 0.8,
-        },
+      gsap.from(".section-header", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: faqContainerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reset",
+          trigger: ".section-header",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
         },
       });
+      const items: HTMLElement[] = gsap.utils.toArray<HTMLElement>(".faq-box");
 
-      tl.from(".section-header", {
-        y: 70,
-        ease: "power2.out",
-      }).from(
-        ".faq-box",
-        {
-          y: -30,
-          stagger: 0.15,
+      items.forEach((item) => {
+        gsap.from(item, {
+          y: 80,
+          opacity: 0,
+          duration: 1,
           ease: "power3.out",
-        },
-        "-=0.4",
-      );
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
     },
     { scope: faqContainerRef },
   );
@@ -56,7 +58,7 @@ const FaqSection = () => {
       <div className="section-header w-fit pb-[40px] md:pb-[60px]">
         <SectionHeadingText text={"FAQ"} />
       </div>
-      <div className="flex flex-col gap-[20px] md:gap-[30px] lg:gap-[40px]">
+      <div className="faq-flex flex flex-col gap-[20px] md:gap-[30px] lg:gap-[40px]">
         {faqInfo.map((elem: IFaqInfo, idx: number) => {
           return (
             <div

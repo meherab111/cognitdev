@@ -66,11 +66,11 @@ const ContactFormSection = () => {
   useGSAP(
     () => {
       const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: { opacity: 0, duration: 0.8, ease: "power2.inOut" },
+        defaults: { opacity: 0, duration: 1, ease: "power2.inOut" },
         scrollTrigger: {
           trigger: contactContainerRef.current,
           start: "top 85%",
-          toggleActions: "play none none reset",
+          toggleActions: "play none none reverse",
         },
       });
 
@@ -88,7 +88,10 @@ const ContactFormSection = () => {
   );
 
   return (
-    <section ref={contactContainerRef} className="custom-container py-[50px] md:py-[100px] flex flex-col xl:flex-row justify-evenly gap-[16px] md:gap-[20px] xl:gap-0">
+    <section
+      ref={contactContainerRef}
+      className="custom-container py-[50px] md:py-[100px] flex flex-col xl:flex-row justify-evenly gap-[16px] md:gap-[20px] xl:gap-0 overflow-hidden"
+    >
       <figure className="left-content">
         <iframe
           title="CognitDev Location"

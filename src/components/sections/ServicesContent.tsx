@@ -31,18 +31,6 @@ const ServicesContent = (props: IProps) => {
         },
       });
 
-      // gsap.from(".services-grid", {
-      //   opacity: 0,
-      //   duration: 1,
-      //   y: 80,
-      //   ease: "power3.out",
-      //   scrollTrigger: {
-      //     trigger: ".services-grid",
-      //     start: "top 75%",
-      //     toggleActions: "play none none reverse",
-      //   },
-      // });
-
       const items: HTMLElement[] =
         gsap.utils.toArray<HTMLElement>(".services-grid");
 

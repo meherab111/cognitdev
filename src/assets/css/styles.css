@@ -39,7 +39,10 @@
   }
 
   .testimonial-card,
-  .mobile-navbar, .navbarIcon, .bg-overlay, .faq-answer {
+  .mobile-navbar,
+  .navbarIcon,
+  .bg-overlay,
+  .faq-answer {
     transition: all 0.4s ease-in-out;
   }
 
@@ -116,8 +119,6 @@
       transform: rotate(-360deg);
     }
   }
-
-
 
   .custom-container {
     width: 100%;
@@ -201,4 +202,3 @@ html.lenis body {
   transition-duration: 1ms;
   transition-behavior: allow-discrete;
 }
-/* the end */

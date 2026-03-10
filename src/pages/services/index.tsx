@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <>
       <title>CognitDev | Services</title>
-{/* title */}
+
       <HeroSection />
       <ServicesSection />
       <CtaSection />

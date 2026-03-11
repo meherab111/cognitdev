@@ -1,37 +1,38 @@
-// import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import Button from "../../../components/shared/Button";
-// import gsap from "gsap";
-// import { useRef } from "react";
-// import useHomePageReveal from "../../../hooks/useHomePageReveal";
+import gsap from "gsap";
+import { useRef } from "react";
+import useHomePageReveal from "../../../hooks/useHomePageReveal";
 
 const HeroSection = () => {
-  // const homeContainerRef = useRef<HTMLDivElement | null>(null);
-  // const preLoadingDone = useHomePageReveal(homeContainerRef);
-  // useGSAP(
-  //   () => {
-  //     if (!preLoadingDone) return;
-  //     const tl: gsap.core.Timeline = gsap.timeline({
-  //       defaults: { opacity: 0, duration: 0.8 },
-  //     });
+  const homeContainerRef = useRef<HTMLDivElement | null>(null);
+  const preLoadingDone = useHomePageReveal(homeContainerRef);
+  useGSAP(
+    () => {
+      if (!preLoadingDone) return;
+      const tl: gsap.core.Timeline = gsap.timeline({
+        defaults: { opacity: 0, duration: 0.8 },
+      });
 
-  //     tl.from(".home-image", {
-  //       x: -50,
-  //       ease: "power2.inOut",
-  //     }).from(
-  //       ".home-heading, .btn",
-  //       {
-  //         y: 30,
-  //         stagger: 0.15,
-  //         ease: "power3.inOut",
-  //       },
-  //       "-=0.3",
-  //     );
-  //   },
-  //   { scope: homeContainerRef, dependencies: [preLoadingDone] },
-  // );
+      tl.from(".home-image", {
+        x: -50,
+        ease: "power2.inOut",
+      }).from(
+        ".home-heading, .btn",
+        {
+          y: 30,
+          stagger: 0.15,
+          ease: "power3.inOut",
+        },
+        "-=0.3",
+      );
+    },
+    { scope: homeContainerRef, dependencies: [preLoadingDone] },
+  );
 
   return (
     <section
+      ref={homeContainerRef}
       className="custom-container pt-[120px] lg:pt-[200px] pb-[50px] lg:pb-[100px] flex flex-col lg:flex-row gap-[20px] md:gap-[30px] items-center"
     >
       <figure className="home-image">

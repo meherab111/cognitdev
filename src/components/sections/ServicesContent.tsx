@@ -75,7 +75,7 @@ const ServicesContent = (props: IProps) => {
             ease: "power3.out",
             scrollTrigger: {
               trigger: info,
-              start: "top 72%",
+              start: "top bottom",
               toggleActions: "play none none reverse",
             },
           });

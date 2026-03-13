@@ -42,7 +42,7 @@ const HeroSection = () => {
           width="700"
           height="550"
           loading="eager"
-          className="h-full max-h-[500px] md:h-auto w-[600px] lg:w-[650px] xl:w-[700px] object-cover rounded-md"
+          className="h-[42dvh] sm:h-[52dvh] lg:h-auto w-[600px] lg:w-[700px] object-cover rounded-md"
         />
       </figure>
       <div className="flex flex-col items-start gap-[20px] md:gap-[30px] lg:gap-[60px]">

@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
         scrollTrigger: {
           trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
         scrollTrigger: {
           trigger: ".testimonials-box",
           start: "top 75%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
         scrollTrigger: {
           trigger: ".testimonials-info",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
     },

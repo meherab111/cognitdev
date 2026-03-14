@@ -16,7 +16,7 @@ const CtaSection = () => {
         scrollTrigger: {
           trigger: ".cta-box",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -29,7 +29,7 @@ const CtaSection = () => {
         scrollTrigger: {
           trigger: ".cta-infos",
           start: "top 82%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
     },

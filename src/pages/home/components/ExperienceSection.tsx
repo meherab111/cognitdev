@@ -18,7 +18,7 @@ const ExperienceSection = () => {
         scrollTrigger: {
           trigger: ".experience-box",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -31,7 +31,7 @@ const ExperienceSection = () => {
         scrollTrigger: {
           trigger: ".experience-items",
           start: "top 82%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
     },

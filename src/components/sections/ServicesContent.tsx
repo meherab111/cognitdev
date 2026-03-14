@@ -27,7 +27,7 @@ const ServicesContent = (props: IProps) => {
         scrollTrigger: {
           trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -43,7 +43,7 @@ const ServicesContent = (props: IProps) => {
           scrollTrigger: {
             trigger: item,
             start: "top 75%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       });
@@ -57,7 +57,7 @@ const ServicesContent = (props: IProps) => {
         scrollTrigger: {
           trigger: ".service-infos",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -76,7 +76,7 @@ const ServicesContent = (props: IProps) => {
             scrollTrigger: {
               trigger: info,
               start: "top bottom",
-              toggleActions: "play none none reverse",
+              toggleActions: "play none none none",
             },
           });
         });

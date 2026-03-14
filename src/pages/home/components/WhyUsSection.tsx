@@ -19,7 +19,7 @@ const WhyUsSection = () => {
         scrollTrigger: {
           trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -34,7 +34,7 @@ const WhyUsSection = () => {
           scrollTrigger: {
             trigger: card,
             start: "top 75%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       });
@@ -48,7 +48,7 @@ const WhyUsSection = () => {
         scrollTrigger: {
           trigger: ".why-card",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
       

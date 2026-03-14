@@ -13,7 +13,7 @@ const ImageSection = () => {
         scrollTrigger: {
           trigger: imageContainerRef.current,
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -35,7 +35,7 @@ const ImageSection = () => {
         scrollTrigger: {
           trigger: ".experience-box",
           start: "top 82%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
     },

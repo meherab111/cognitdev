@@ -25,7 +25,7 @@ const FaqSection = () => {
         scrollTrigger: {
           trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
       const items: HTMLElement[] = gsap.utils.toArray<HTMLElement>(".faq-box");
@@ -39,7 +39,7 @@ const FaqSection = () => {
           scrollTrigger: {
             trigger: item,
             start: "top 90%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       });

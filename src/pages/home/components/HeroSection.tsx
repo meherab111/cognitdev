@@ -11,7 +11,7 @@ const HeroSection = () => {
     () => {
       if (!preLoadingDone) return;
       const tl: gsap.core.Timeline = gsap.timeline({
-        defaults: { opacity: 0, duration: 0.8 },
+        defaults: { opacity: 0, duration: 1 },
       });
 
       tl.from(".home-image", {

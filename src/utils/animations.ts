@@ -1,21 +1,23 @@
-interface IScrollReveal {
-  y: number;
-  opacity: number;
-  duration: number;
+interface IScrollRevealProps {
+  y?: number;
 }
 
-interface IProps {
+interface IScrollTriggerProps {
   trigger: gsap.DOMTarget | undefined;
   start: string | undefined;
 }
 
-export const scrollReveal: IScrollReveal = {
-  y: 80,
-  opacity: 0,
-  duration: 1,
+export const getScrollReveal = (props: IScrollRevealProps) => {
+  const { y } = props;
+
+  return {
+    y,
+    opacity: 0,
+    duration: 1,
+  };
 };
 
-export const getScrollInfo = (props: IProps) => {
+export const getScrollTrigger = (props: IScrollTriggerProps) => {
   const { trigger, start } = props;
 
   return {

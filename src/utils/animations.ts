@@ -1,7 +1,8 @@
+// reveal props
 interface IScrollRevealProps {
   y?: number;
 }
-
+// trigger props 
 interface IScrollTriggerProps {
   trigger: gsap.DOMTarget | undefined;
   start: string | undefined;

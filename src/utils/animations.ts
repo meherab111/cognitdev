@@ -27,3 +27,4 @@ export const getScrollTrigger = (props: IScrollTriggerProps) => {
     toggleActions: "play none none none",
   };
 };
+// add animations asap on everything

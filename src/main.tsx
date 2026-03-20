@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
-
+// hheelelelel
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

@@ -29,7 +29,7 @@ const HeroSection = () => {
     },
     { scope: homeContainerRef, dependencies: [preLoadingDone] },
   );
-
+// hero section here
   return (
     <section
       ref={homeContainerRef}

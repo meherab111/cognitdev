@@ -5,7 +5,7 @@ import InfinityScrollSection from "./components/InfinityScrollSection";
 import ServicesSection from "./components/ServicesSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import WhyUsSection from "./components/WhyUsSection";
-
+// lets finish this
 const Home = () => {
   return (
     <>

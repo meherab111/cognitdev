@@ -8,7 +8,7 @@ import gsap from "gsap";
 
 const WhyUsSection = () => {
   const whyUsContainerRef = useRef<HTMLDivElement | null>(null);
-//  reuseable it
+//  why us section
   useGSAP(
     () => {
       gsap.from(".section-header", {

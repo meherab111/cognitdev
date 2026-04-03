@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
     },
     { scope: testimonialsContainerRef },
   );
-
+// start here
   return (
     <section
       ref={testimonialsContainerRef}

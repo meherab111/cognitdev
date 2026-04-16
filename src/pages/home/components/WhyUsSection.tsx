@@ -55,7 +55,7 @@ const WhyUsSection = () => {
     },
     { scope: whyUsContainerRef },
   );
-// hero why section
+// hero why us section here
   return (
     <section
       ref={whyUsContainerRef}

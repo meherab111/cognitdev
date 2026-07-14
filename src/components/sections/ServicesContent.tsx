@@ -11,7 +11,7 @@ interface IProps {
   btn?: boolean;
   colSpan?: boolean;
 }
-// service content here
+
 const ServicesContent = (props: IProps) => {
   const { slicedServicesLayout, btn, colSpan } = props;
 

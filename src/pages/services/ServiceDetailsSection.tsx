@@ -41,7 +41,7 @@ const ServiceDetailsSection = () => {
         scrollTrigger: {
           trigger: ".section-header",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -58,7 +58,7 @@ const ServiceDetailsSection = () => {
           scrollTrigger: {
             trigger: item,
             start: "top 75%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       });
@@ -72,7 +72,7 @@ const ServiceDetailsSection = () => {
         scrollTrigger: {
           trigger: ".details-grid",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -85,7 +85,7 @@ const ServiceDetailsSection = () => {
         scrollTrigger: {
           trigger: ".info-flex",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -97,7 +97,7 @@ const ServiceDetailsSection = () => {
         scrollTrigger: {
           trigger: ".top-img",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -109,7 +109,7 @@ const ServiceDetailsSection = () => {
         scrollTrigger: {
           trigger: ".bottom-img",
           start: "top 72%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
 
@@ -121,7 +121,7 @@ const ServiceDetailsSection = () => {
         scrollTrigger: {
           trigger: ".service-btn",
           start: "top 95%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
       });
     },

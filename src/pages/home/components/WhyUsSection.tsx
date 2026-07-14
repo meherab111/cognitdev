@@ -8,7 +8,7 @@ import gsap from "gsap";
 
 const WhyUsSection = () => {
   const whyUsContainerRef = useRef<HTMLDivElement | null>(null);
-//  why us section
+
   useGSAP(
     () => {
       gsap.from(".section-header", {
@@ -55,7 +55,7 @@ const WhyUsSection = () => {
     },
     { scope: whyUsContainerRef },
   );
-// hero why us section here
+
   return (
     <section
       ref={whyUsContainerRef}

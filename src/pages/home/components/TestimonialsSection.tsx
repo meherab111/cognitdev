@@ -6,7 +6,7 @@ import type { ITestimonialsInfo } from "../../../types/home/testimonials-section
 import SectionHeadingText from "../../../components/sections/SectionHeadingText";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-// testimonials section
+
 const TestimonialsSection = () => {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
 
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
     },
     { scope: testimonialsContainerRef },
   );
-// start here
+
   return (
     <section
       ref={testimonialsContainerRef}

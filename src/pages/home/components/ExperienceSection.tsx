@@ -3,7 +3,7 @@ import experienceInfo from "../../../apis/home/experience-section/experienceInfo
 import type { IExperienceInfo } from "../../../types/home/experience-section/typesExperience";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-// experience section
+
 const ExperienceSection = () => {
   const experienceContainerRef = useRef<HTMLDivElement | null>(null);
   const borderLength: number = experienceInfo.length - 1;
